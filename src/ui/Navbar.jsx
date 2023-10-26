@@ -2,8 +2,12 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
+  background-color: black;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  height: 6.5rem;
 `;
 
 const NavList = styled.ul`
@@ -17,30 +21,34 @@ const StyledNavLink = styled(NavLink)`
     align-items: center;
     gap: 1.2rem;
 
-    color: black;
-    font-size: 1.6rem;
-    font-weight: 500;
+    background-color: transparent;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
   }
 
-  /* This works because react-router places the active class on the active NavLink */
-  &:hover,
-  &:active,
-  &.active:link,
-  &.active:visited {
-    color: crimson;
+  &:hover {
+    border-bottom: 1px solid red;
   }
 `;
 
 const Logo = styled.picture`
-  font-size: 3rem;
+  background-image: url(../../public/FromSouthLogo.png);
+  background-position: center;
+  background-size: cover;
+  height: 4rem;
+  width: 4rem;
+  display: block;
 `;
 
 function Navbar() {
   return (
     <Nav>
-      <Logo>logo</Logo>
+      <Logo />
       <NavList>
         <li>
           <StyledNavLink to="/about">

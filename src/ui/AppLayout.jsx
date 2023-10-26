@@ -4,7 +4,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 
 const StyledAppLayout = styled.div`
-  background-color: grey;
+  background-color: #181818;
   width: 100%;
   height: 100vh;
 `;
@@ -14,7 +14,7 @@ function AppLayout() {
     <StyledAppLayout>
       <Navbar />
 
-      <main>imagen</main>
+      <main>From South Studio</main>
 
       <section>
         <Outlet />
