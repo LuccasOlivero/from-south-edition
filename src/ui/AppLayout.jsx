@@ -66,8 +66,6 @@ function AppLayout() {
     };
   }, []);
 
-  console.log(coords);
-
   return (
     <StyledAppLayout>
       <Section>
