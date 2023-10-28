@@ -6,8 +6,8 @@ const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10rem;
   height: 6.5rem;
+  border-bottom: 0.5px solid #464646;
 `;
 
 const NavList = styled.ul`
@@ -32,7 +32,7 @@ const StyledNavLink = styled(NavLink)`
   }
 
   &:hover {
-    border-bottom: 1px solid red;
+    color: red;
   }
 `;
 
