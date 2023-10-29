@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 import Navbar from "./Navbar";
 import { useEffect, useState } from "react";
+import SpinningText from "./SpinningText";
 
 const StyledAppLayout = styled.div`
   background-color: black;
@@ -27,15 +28,16 @@ const StyledH1 = styled.main`
 `;
 
 const StyledH2 = styled.h2`
-  font-size: 5rem;
+  font-size: 4rem;
   color: white;
   text-transform: uppercase;
   margin: 1rem 0rem;
+  font-weight: 900;
 `;
 
 const Buttom = styled.button`
   width: 16rem;
-  height: 5rem;
+  height: 4.5rem;
   background-color: transparent;
   border: 1.5px solid white;
   color: white;
@@ -48,37 +50,46 @@ const Buttom = styled.button`
   }
 `;
 
+const Main = styled.main`
+  display: flex;
+  justify-content: space-between;
+`;
+
 function AppLayout() {
-  const [coords, setCoords] = useState({ x: 0, y: 0 });
+  // const [coords, setCoords] = useState({ x: 0, y: 0 });
 
-  useEffect(() => {
-    const handleWindowMouseMove = (e) => {
-      setCoords({
-        x: e.clientX,
-        y: e.clientY,
-      });
-    };
+  // useEffect(() => {
+  //   const handleWindowMouseMove = (e) => {
+  //     setCoords({
+  //       x: e.clientX,
+  //       y: e.clientY,
+  //     });
+  //   };
 
-    window.addEventListener("mousemove", handleWindowMouseMove);
+  //   window.addEventListener("mousemove", handleWindowMouseMove);
 
-    return () => {
-      window.removeEventListener("mousemove", handleWindowMouseMove);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("mousemove", handleWindowMouseMove);
+  //   };
+  // }, []);
 
   return (
     <StyledAppLayout>
       <Section>
         <Navbar />
 
-        <main>
-          <StyledH1>South Studio</StyledH1>
-          <StyledH2>
-            he full spectrun of
-            <br /> content creation
-          </StyledH2>
-          <Buttom>Selected Work</Buttom>
-        </main>
+        <Main>
+          <div>
+            <StyledH1>South Studio</StyledH1>
+            <StyledH2>
+              he full spectrun of
+              <br /> content creation
+            </StyledH2>
+            <Buttom>Selected Work</Buttom>
+          </div>
+
+          <SpinningText text="test test test test test test" />
+        </Main>
 
         <section>
           <Outlet />

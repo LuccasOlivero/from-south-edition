@@ -23,9 +23,7 @@ html {
 body {
   font-family: "Poppins", sans-serif;
 
-  transition: color 0.3s, background-color 0.3s;
   min-height: 100vh;
-  font-size: 1.6rem;
 }
 
 input,
@@ -38,11 +36,6 @@ select {
 
 button {
   cursor: pointer;
-}
-
-/* Parent selector, finally 😃 */
-button:has(svg) {
-  line-height: 0;
 }
 
 a {
