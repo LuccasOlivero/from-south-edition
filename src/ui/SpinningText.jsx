@@ -24,7 +24,7 @@ const Text = styled.span`
   position: absolute;
   top: 0;
   left: 50%;
-  transform-origin: 0 300px;
+  /* transform-origin: 0 300px; */
 `;
 
 function SpinningText({ text }) {
