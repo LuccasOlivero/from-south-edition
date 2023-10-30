@@ -1,4 +1,4 @@
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import { spin } from "../styles/Keyframes";
 
 const Container = styled.div`
@@ -9,7 +9,7 @@ const Container = styled.div`
   border-radius: 50%;
   display: grid;
   place-items: center;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: bold;
 `;
 
@@ -18,13 +18,14 @@ const TextWrapper = styled.div`
   width: 100%;
   height: 100%;
   animation: ${spin} 50s linear infinite;
+  display: flex;
 `;
 
 const Text = styled.span`
   position: absolute;
   top: 0;
   left: 50%;
-  /* transform-origin: 0 300px; */
+  transform-origin: 0 150px;
 `;
 
 function SpinningText({ text }) {
@@ -36,7 +37,7 @@ function SpinningText({ text }) {
       <TextWrapper>
         <p>
           {text.split("").map((letter, i) => (
-            <Text key={i} style={{ transform: `rotate(${deg * i})deg` }}>
+            <Text key={i} style={{ transform: `rotate(${deg * i}deg)` }}>
               {letter}
             </Text>
           ))}
