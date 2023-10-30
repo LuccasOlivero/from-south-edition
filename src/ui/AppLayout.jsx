@@ -53,6 +53,8 @@ const Buttom = styled.button`
 const Main = styled.main`
   display: flex;
   justify-content: space-between;
+  height: 80vh;
+  position: relative;
 `;
 
 function AppLayout() {
@@ -87,8 +89,7 @@ function AppLayout() {
             </StyledH2>
             <Buttom>Selected Work</Buttom>
           </div>
-
-          <SpinningText text="test test test test test test" />
+          <SpinningText text="watch show reel - watch show reel - " />
         </Main>
 
         <section>
