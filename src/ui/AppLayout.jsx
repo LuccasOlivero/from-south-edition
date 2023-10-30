@@ -1,14 +1,20 @@
-import { Outlet } from "react-router-dom";
+import { useEffect, useState } from "react";
 import styled from "styled-components";
 
 import Navbar from "./Navbar";
-import { useEffect, useState } from "react";
 import SpinningText from "./SpinningText";
+import Slider from "./Slider";
 
 const StyledAppLayout = styled.div`
   background-color: black;
   width: 100%;
   height: 100vh;
+`;
+
+const SliderContainer = styled.div`
+  display: flex;
+  position: absolute;
+  overflow: hidden;
 `;
 
 const Section = styled.section`
@@ -57,6 +63,14 @@ const Main = styled.main`
   position: relative;
 `;
 
+const Section2 = styled.div`
+  background-color: red;
+  position: relative;
+  height: 100%;
+  display: flex;
+  z-index: 200;
+`;
+
 function AppLayout() {
   // const [coords, setCoords] = useState({ x: 0, y: 0 });
 
@@ -77,9 +91,14 @@ function AppLayout() {
 
   return (
     <StyledAppLayout>
+      <SliderContainer>
+        <Slider />
+        <Slider />
+        <Slider />
+        <Slider />
+      </SliderContainer>
       <Section>
         <Navbar />
-
         <Main>
           <div>
             <StyledH1>South Studio</StyledH1>
@@ -91,11 +110,22 @@ function AppLayout() {
           </div>
           <SpinningText text="watch show reel - watch show reel - " />
         </Main>
-
-        <section>
-          <Outlet />
-        </section>
       </Section>
+
+      <Section2>
+        <h2>test</h2>
+      </Section2>
+
+      <Section2>
+        <h2>test</h2>
+      </Section2>
+
+      <Section2>
+        <h2>test</h2>
+      </Section2>
+      <Section2>
+        <h2>test</h2>
+      </Section2>
     </StyledAppLayout>
   );
 }
