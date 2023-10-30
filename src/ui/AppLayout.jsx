@@ -6,20 +6,25 @@ import SpinningText from "./SpinningText";
 import Slider from "./Slider";
 
 const StyledAppLayout = styled.div`
-  background-color: black;
+  background: radial-gradient(at left top, #010101, #000000e2);
   width: 100%;
   height: 100vh;
+  position: relative;
+  overflow-x: hidden;
 `;
 
 const SliderContainer = styled.div`
-  display: flex;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   position: absolute;
-  overflow: hidden;
+  z-index: -1;
+  background-color: black;
 `;
 
 const Section = styled.section`
   margin: 0 auto;
-  width: 80%;
+  padding: 0 13rem;
   height: 100%;
 `;
 
@@ -49,6 +54,7 @@ const Buttom = styled.button`
   color: white;
   border-radius: 8rem;
   font-size: 1.8rem;
+  transition: all 0.3s ease-in-out;
 
   &:hover {
     background-color: white;
@@ -57,9 +63,10 @@ const Buttom = styled.button`
 `;
 
 const Main = styled.main`
+  padding-top: 6rem;
   display: flex;
   justify-content: space-between;
-  height: 80vh;
+  height: 90vh;
   position: relative;
 `;
 
@@ -92,13 +99,18 @@ function AppLayout() {
   return (
     <StyledAppLayout>
       <SliderContainer>
-        <Slider />
-        <Slider />
-        <Slider />
-        <Slider />
+        <Slider scroll="scroll1" />
+        <Slider scroll="scroll2" />
+
+        <Slider scroll="scroll1" />
+        <Slider scroll="scroll2" />
+
+        <Slider scroll="scroll1" />
       </SliderContainer>
+
+      <Navbar />
+
       <Section>
-        <Navbar />
         <Main>
           <div>
             <StyledH1>South Studio</StyledH1>
@@ -108,7 +120,7 @@ function AppLayout() {
             </StyledH2>
             <Buttom>Selected Work</Buttom>
           </div>
-          <SpinningText text="watch show reel - watch show reel - " />
+          <SpinningText text="watch show reel - watch show reel - "></SpinningText>
         </Main>
       </Section>
 

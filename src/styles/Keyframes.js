@@ -9,29 +9,56 @@ export const spin = keyframes`
 }
 `;
 
-export const scroll = keyframes`
+export const scroll1 = keyframes`
 0%{
     -webkit-animation: translateY(0);
     transform: translateY(0);
 }
 
 25%{
-    -webkit-animation: translateY(calc(-200px * 4));
-    transform: translateY(calc(-200px * 4));
+    -webkit-animation: translateY(calc(-150px * 4));
+    transform: translateY(calc(-150px * 4));
 }
 
 50%{
-    -webkit-animation: translateY(calc(+200px * 4));
-    transform: translateY(calc(+200px * 4));
+    -webkit-animation: translateY(calc(+150px * 4));
+    transform: translateY(calc(+150px * 4));
 }
 
 75%{
-    -webkit-animation: translateY(calc(-200px * 4));
-    transform: translateY(calc(-200px * 4));
+    -webkit-animation: translateY(calc(-150px * 4));
+    transform: translateY(calc(-150px * 4));
 }
 
 100%{
-    -webkit-animation: translateY(calc(+200px * 4));
-    transform: translateY(calc(+200px * 4));
+    -webkit-animation: translateY(calc(+150px * 4));
+    transform: translateY(calc(+150px * 4));
+}
+`;
+
+export const scroll2 = keyframes`
+0%{
+    -webkit-animation: translateY(0);
+    transform: translateY(0);
+}
+
+25%{
+    -webkit-animation: translateY(calc(+150px * 4));
+    transform: translateY(calc(+150px * 4));
+}
+
+50%{
+    -webkit-animation: translateY(calc(-150px * 4));
+    transform: translateY(calc(-150px * 4));
+}
+
+75%{
+    -webkit-animation: translateY(calc(+150px * 4));
+    transform: translateY(calc(+150px * 4));
+}
+
+100%{
+    -webkit-animation: translateY(calc(-150px * 4));
+    transform: translateY(calc(-150px * 4));
 }
 `;

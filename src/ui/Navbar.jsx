@@ -2,12 +2,16 @@ import { NavLink } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
-  background-color: black;
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 6.5rem;
   border-bottom: 0.5px solid #464646;
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+  padding: 0 13rem;
 `;
 
 const NavList = styled.ul`
@@ -37,7 +41,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const Logo = styled.picture`
-  background-image: url(../../public/FromSouthLogo.png);
+  background-image: url(../../public/logo.svg);
   background-position: center;
   background-size: cover;
   height: 4rem;

@@ -31,6 +31,13 @@ const Text = styled.span`
   transform-origin: 5px 120px;
 `;
 
+const Picture = styled.picture`
+  background-image: url(../../public/logo.svg);
+  display: flex;
+  width: 9rem;
+  height: 9rem;
+`;
+
 function SpinningText({ text }) {
   const length = text.length;
   const deg = 360 / length;
@@ -46,6 +53,7 @@ function SpinningText({ text }) {
           ))}
         </p>
       </TextWrapper>
+      <Picture />
     </Container>
   );
 }
