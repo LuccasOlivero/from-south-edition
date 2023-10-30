@@ -3,7 +3,7 @@ import { scroll1, scroll2 } from "../styles/Keyframes";
 
 const DivSlider = styled.div`
   width: 33rem;
-  left: -20rem;
+  left: -29rem;
   height: auto;
   margin: auto;
   position: relative;
@@ -12,16 +12,16 @@ const DivSlider = styled.div`
 const DivSlideTrack = styled.div`
   display: flex;
   flex-direction: column;
-  rotate: 15deg;
+  rotate: 20deg;
   width: calc(200px * 14);
   gap: 2rem 0;
   position: relative;
 
-  animation: ${(props) => (props.scroll === "scroll1" ? scroll1 : scroll2)} 200s
+  animation: ${(props) => (props.scroll === "scroll1" ? scroll1 : scroll2)} 370s
     linear infinite;
   -webkit-animation: ${(props) =>
       props.scroll === "scroll1" ? scroll1 : scroll2}
-    200s linear infinite;
+    370s linear infinite;
 `;
 
 const DivSlide = styled.div`

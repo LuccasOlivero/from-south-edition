@@ -44,8 +44,8 @@ const Logo = styled.picture`
   background-image: url(../../public/logo.svg);
   background-position: center;
   background-size: cover;
-  height: 4rem;
-  width: 4rem;
+  height: 5rem;
+  width: 5rem;
   display: block;
 `;
 
