@@ -15,6 +15,7 @@ import { Buttom } from "./Buttom";
 import { Picture } from "./Picture";
 import { Main } from "./Main";
 import { SliderContainer } from "./SliderContainer";
+import { Line } from "./Line";
 
 const StyledAppLayout = styled.div`
   background: radial-gradient(at left top, #010101, #000000e2);
@@ -22,6 +23,27 @@ const StyledAppLayout = styled.div`
   height: 100vh;
   position: relative;
   overflow-x: hidden;
+`;
+
+const Footer = styled.div`
+  background-color: black;
+  margin: 0;
+  overflow-x: hidden;
+`;
+
+const Noise = styled.div`
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200vh;
+  background: transparent
+    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
+  background-repeat: repeat;
+  animation: bg-animation 0.2s infinite;
+  opacity: 0.9;
+  visibility: visible;
 `;
 
 function AppLayout() {
@@ -64,7 +86,7 @@ function AppLayout() {
         <Main>
           <div>
             <H1>South Studio</H1>
-            <H2>
+            <H2 uppercase="uppercase">
               he full spectrun of
               <br /> content creation
             </H2>
@@ -79,9 +101,24 @@ function AppLayout() {
         </Main>
       </Section>
 
+      <Line />
+
       <Section>
-        <H2>tests</H2>
+        <H2 as="p" space="marginTop">
+          At FromSouth, we know that no two projects are alike. We approach each
+          job with a fresh and expansive mindset to create a curated, customized
+          experience for every client. We love pushing the limits of what is
+          achievable to bring each design into a unique reality. We specialize
+          in short-form video editing, allowing us to provide a creative and
+          effective approach to visual communication.
+        </H2>
       </Section>
+
+      <Line />
+
+      <Footer>
+        <Noise></Noise>
+      </Footer>
     </StyledAppLayout>
   );
 }
