@@ -3,8 +3,10 @@ import styled from "styled-components";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
-import Slider from "./Slider";
+import Slider1 from "./SliderImg1";
+import Slider2 from "./SliderImg2";
 import SliderGif from "./SliderGif";
+import SliderGif2 from "./SliderGiff2";
 
 const StyledAppLayout = styled.div`
   background: radial-gradient(at left top, #010101, #000000e2);
@@ -21,6 +23,7 @@ const SliderContainer = styled.div`
   position: absolute;
   z-index: -1;
   background-color: black;
+  overflow: hidden;
 `;
 
 const Section = styled.section`
@@ -100,13 +103,13 @@ function AppLayout() {
   return (
     <StyledAppLayout>
       <SliderContainer>
-        <Slider scroll="scroll1" />
-        <Slider scroll="scroll2" />
+        <Slider1 scroll="scroll1" />
+        <Slider2 scroll="scroll2" />
 
         <SliderGif scroll="scroll1" />
-        <SliderGif scroll="scroll2" />
+        <SliderGif2 scroll="scroll2" />
 
-        <Slider scroll="scroll1" />
+        <Slider1 scroll="scroll1" />
       </SliderContainer>
 
       <Navbar />

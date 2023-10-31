@@ -32,7 +32,7 @@ const Text = styled.span`
 `;
 
 const Picture = styled.picture`
-  background-image: url(../../public/logo.svg);
+  background-image: url(/logo.svg);
   display: flex;
   width: 9rem;
   height: 9rem;

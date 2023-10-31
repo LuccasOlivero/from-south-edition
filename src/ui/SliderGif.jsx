@@ -7,6 +7,7 @@ const DivSlider = styled.div`
   height: auto;
   margin: auto;
   position: relative;
+  white-space: nowrap;
 `;
 
 const DivSlideTrack = styled.div`
@@ -59,7 +60,7 @@ export default function SliderGif({ scroll }) {
           <Img src="/gif6.gif" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/gif7.gif" alt="test" />
+          <Img src="/gif3.gif" alt="test" />
         </DivSlide>
       </DivSlideTrack>
     </DivSlider>

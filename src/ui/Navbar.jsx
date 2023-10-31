@@ -41,7 +41,7 @@ const StyledNavLink = styled(NavLink)`
 `;
 
 const Logo = styled.picture`
-  background-image: url(../../public/logo.svg);
+  background-image: url(/logo.svg);
   background-position: center;
   background-size: cover;
   height: 5rem;
