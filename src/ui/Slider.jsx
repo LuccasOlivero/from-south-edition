@@ -41,25 +41,25 @@ export default function Slider({ scroll }) {
     <DivSlider>
       <DivSlideTrack scroll={scroll}>
         <DivSlide>
-          <Img src="../../public/img1.jpg" alt="test" />
+          <Img src="/img1.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="../../public/img1.jpg" alt="test" />
+          <Img src="/img2.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="../../public/img1.jpg" alt="test" />
+          <Img src="/img3.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="../../public/img1.jpg" alt="test" />
+          <Img src="/img4.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="../../public/img2.jpg" alt="test" />
+          <Img src="/img5.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="../../public/img1.jpg" alt="test" />
+          <Img src="/img6.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="../../public/img3.jpg" alt="test" />
+          <Img src="../../public/img7.png" alt="test" />
         </DivSlide>
       </DivSlideTrack>
     </DivSlider>

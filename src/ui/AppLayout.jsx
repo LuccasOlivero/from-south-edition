@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
 import Slider from "./Slider";
+import SliderGif from "./SliderGif";
 
 const StyledAppLayout = styled.div`
   background: radial-gradient(at left top, #010101, #000000e2);
@@ -30,20 +31,20 @@ const Section = styled.section`
 
 const StyledH1 = styled.main`
   -webkit-text-stroke: 1px white;
-  font-size: 36px;
   font-weight: bold;
-  font-size: 7rem;
+  font-size: 7.5rem;
   color: transparent;
   text-transform: uppercase;
   margin-top: 9rem;
 `;
 
 const StyledH2 = styled.h2`
-  font-size: 4rem;
+  font-size: 4.5rem;
   color: white;
   text-transform: uppercase;
-  margin: 1rem 0rem;
+  margin: 2rem 0;
   font-weight: 900;
+  line-height: 4.5rem;
 `;
 
 const Buttom = styled.button`
@@ -102,8 +103,8 @@ function AppLayout() {
         <Slider scroll="scroll1" />
         <Slider scroll="scroll2" />
 
-        <Slider scroll="scroll1" />
-        <Slider scroll="scroll2" />
+        <SliderGif scroll="scroll1" />
+        <SliderGif scroll="scroll2" />
 
         <Slider scroll="scroll1" />
       </SliderContainer>
