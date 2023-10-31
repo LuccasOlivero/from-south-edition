@@ -33,10 +33,7 @@ const StyledNavLink = styled(NavLink)`
     font-weight: 600;
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
-  }
-
-  &:hover {
-    color: red;
+    position: relative;
   }
 `;
 
@@ -49,24 +46,46 @@ const Logo = styled.picture`
   display: block;
 `;
 
+const Span = styled.span`
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: #0f5b5b;
+    transition: width 0.6s ease-out;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+`;
+
 function Navbar() {
   return (
     <Nav>
-      <Logo />
+      <StyledNavLink to="/">
+        <Logo />
+      </StyledNavLink>
+
       <NavList>
         <li>
           <StyledNavLink to="/about">
-            <span>about</span>
+            <Span>about</Span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/services">
-            <span>services</span>
+            <Span>services</Span>
           </StyledNavLink>
         </li>
         <li>
           <StyledNavLink to="/projects">
-            <span>projects</span>
+            <Span>projects</Span>
           </StyledNavLink>
         </li>
       </NavList>
