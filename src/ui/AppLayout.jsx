@@ -16,6 +16,7 @@ import { Picture } from "./Picture";
 import { Main } from "./Main";
 import { SliderContainer } from "./SliderContainer";
 import { Line } from "./Line";
+import { noiseBg } from "../styles/Keyframes";
 
 const StyledAppLayout = styled.div`
   background: radial-gradient(at left top, #010101, #000000e2);
@@ -26,9 +27,19 @@ const StyledAppLayout = styled.div`
 `;
 
 const Footer = styled.div`
+  height: 100vh;
+  width: 100%;
   background-color: black;
-  margin: 0;
-  overflow-x: hidden;
+  overflow: hidden;
+  position: relative;
+`;
+
+const Contact = styled.div`
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+  position: relative;
 `;
 
 const Noise = styled.div`
@@ -41,9 +52,36 @@ const Noise = styled.div`
   background: transparent
     url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
-  animation: bg-animation 0.2s infinite;
+  animation: noiseBg 0.2s infinite;
   opacity: 0.9;
   visibility: visible;
+`;
+
+const DivContact = styled.div`
+  display: flex;
+  height: 90vh;
+  width: 80%;
+  margin: 0 auto;
+  /* background-color: yellow; */
+`;
+
+const DivLinks = styled.div`
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  color: white;
+  width: 20%;
+`;
+
+const Form = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+`;
+
+const Icon = styled.div`
+  font-size: 2rem;
+  color: cyan;
 `;
 
 function AppLayout() {
@@ -79,10 +117,8 @@ function AppLayout() {
 
         <Slider1 scroll="scroll1" />
       </SliderContainer>
-
       <Navbar />
-
-      <Section>
+      <Section type="margin">
         <Main>
           <div>
             <H1>South Studio</H1>
@@ -103,7 +139,7 @@ function AppLayout() {
 
       <Line />
 
-      <Section>
+      <Section type="margin">
         <H2 as="p" space="marginTop">
           At FromSouth, we know that no two projects are alike. We approach each
           job with a fresh and expansive mindset to create a curated, customized
@@ -114,11 +150,32 @@ function AppLayout() {
         </H2>
       </Section>
 
-      <Line />
+      <Contact>
+        <Line />
+        <Noise>
+          <Section type="flex">
+            <DivLinks>
+              <H1>
+                lets <br />
+                talk turkey
+              </H1>
 
-      <Footer>
-        <Noise></Noise>
-      </Footer>
+              <div>
+                <Icon>FACE</Icon>
+                <Icon>link</Icon>
+                <Icon>instagram</Icon>
+              </div>
+            </DivLinks>
+
+            <Form>
+              <input type="text" placeholder="Name" />
+              <input type="email" placeholder="Email" />
+              <input type="text" placeholder="Type your message..." />
+              <Buttom>Submit</Buttom>
+            </Form>
+          </Section>
+        </Noise>
+      </Contact>
     </StyledAppLayout>
   );
 }

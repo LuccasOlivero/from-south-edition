@@ -16,7 +16,8 @@ export const H2 = styled.h2`
 
   font-size: 4.5rem;
   color: white;
-  margin: 2rem 0;
   font-weight: 900;
+  padding: 2rem 0;
   line-height: 5.5rem;
+  position: relative;
 `;
