@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { useRef } from "react";
 
 import Navbar from "./Navbar";
@@ -19,18 +19,17 @@ import { Line } from "./Line";
 import { noiseBg } from "../styles/Keyframes";
 
 const StyledAppLayout = styled.div`
-  background: radial-gradient(at left top, #010101, #000000e2);
   width: 100%;
   height: 100vh;
   position: relative;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 `;
 
 const Footer = styled.div`
   height: 100vh;
   width: 100%;
   background-color: black;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 `;
 
@@ -38,17 +37,19 @@ const Contact = styled.div`
   height: 100vh;
   width: 100%;
   background-color: black;
-  overflow: hidden;
+  /* overflow: hidden; */
   position: relative;
 `;
 
 const Noise = styled.div`
-  top: -50%;
+  position: absolute;
+  /* top: -50%;
   left: -50%;
   right: -50%;
-  bottom: -50%;
-  width: 200%;
-  height: 200vh;
+  bottom: -50%; */
+  left: 0;
+  width: 100%;
+  height: 100%;
   background: transparent
     url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
@@ -57,31 +58,57 @@ const Noise = styled.div`
   visibility: visible;
 `;
 
-const DivContact = styled.div`
-  display: flex;
-  height: 90vh;
-  width: 80%;
-  margin: 0 auto;
-  /* background-color: yellow; */
-`;
-
 const DivLinks = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
   color: white;
-  width: 20%;
+  gap: 10rem;
+  width: 60%;
 `;
 
 const Form = styled.div`
   display: flex;
   flex-direction: column;
-  width: 20%;
+  justify-content: center;
+  gap: 3rem;
+  width: 50%;
+  position: relative;
+  z-index: 10;
 `;
 
 const Icon = styled.div`
   font-size: 2rem;
   color: cyan;
+`;
+
+const Input = styled.input`
+  width: 100%;
+  height: 4rem;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 1px solid white;
+  padding: 1rem 1.5rem;
+  color: white;
+  position: relative;
+
+  ${(props) =>
+    props.format === "textbox" &&
+    css`
+      height: 13rem;
+    `}
+
+  &:focus {
+    outline: none;
+  }
+
+  ::placeholder {
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 1.5rem; /* Ajusta la posición horizontal según tus necesidades */
+    font-size: 1.5rem; /* Ajusta el tamaño de fuente del placeholder */
+  }
 `;
 
 function AppLayout() {
@@ -117,7 +144,9 @@ function AppLayout() {
 
         <Slider1 scroll="scroll1" />
       </SliderContainer>
+
       <Navbar />
+
       <Section type="margin">
         <Main>
           <div>
@@ -139,7 +168,7 @@ function AppLayout() {
 
       <Line />
 
-      <Section type="margin">
+      <Section type="text">
         <H2 as="p" space="marginTop">
           At FromSouth, we know that no two projects are alike. We approach each
           job with a fresh and expansive mindset to create a curated, customized
@@ -148,33 +177,41 @@ function AppLayout() {
           in short-form video editing, allowing us to provide a creative and
           effective approach to visual communication.
         </H2>
+        <Noise />
       </Section>
 
       <Contact>
         <Line />
-        <Noise>
-          <Section type="flex">
-            <DivLinks>
-              <H1>
-                lets <br />
-                talk turkey
+        <Noise />
+
+        <Section type="flex">
+          <DivLinks>
+            <div>
+              <H1 type="form" as="h2">
+                Lets
               </H1>
+              <H2 uppercase="uppercase2">connect!</H2>
+            </div>
 
-              <div>
-                <Icon>FACE</Icon>
-                <Icon>link</Icon>
-                <Icon>instagram</Icon>
-              </div>
-            </DivLinks>
+            <div>
+              <Icon>FACE</Icon>
+              <Icon>link</Icon>
+              <Icon>instagram</Icon>
+            </div>
+          </DivLinks>
 
-            <Form>
-              <input type="text" placeholder="Name" />
-              <input type="email" placeholder="Email" />
-              <input type="text" placeholder="Type your message..." />
-              <Buttom>Submit</Buttom>
-            </Form>
-          </Section>
-        </Noise>
+          <Form>
+            <Input type="text" placeholder="Name" />
+            <Input type="email" placeholder="Email" />
+            <Input
+              id="myInput"
+              type="text-box"
+              placeholder="Type your message..."
+              format="textbox"
+            />
+            <Buttom>Submit</Buttom>
+          </Form>
+        </Section>
       </Contact>
     </StyledAppLayout>
   );

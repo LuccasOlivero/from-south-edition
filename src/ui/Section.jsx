@@ -8,12 +8,24 @@ export const Section = styled.section`
     `}
 
   ${(props) =>
+    props.type === "text" &&
+    css`
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    `}
+
+  ${(props) =>
     props.type === "flex" &&
     css`
       display: flex;
-      /* justify-content: space-between; */
+      height: 100%;
+      /* background-color: red; */
+      justify-content: space-between;
     `}
+
+  background: radial-gradient(at left top, #010101, #000000e2);
   padding: 0 13rem;
-  height: 100vh;
+  height: 100%;
   width: 100%;
 `;

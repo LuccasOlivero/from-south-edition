@@ -7,6 +7,7 @@ const DivSlider = styled.div`
   height: auto;
   margin: auto;
   position: relative;
+  /* overflow: hidden; */
 `;
 
 const DivSlideTrack = styled.div`
@@ -27,6 +28,7 @@ const DivSlideTrack = styled.div`
 const DivSlide = styled.div`
   width: 30rem;
   position: relative;
+  /* overflow: hidden; */
 `;
 
 const Img = styled.img`

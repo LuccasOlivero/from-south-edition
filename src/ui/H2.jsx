@@ -1,23 +1,31 @@
-import styled from "styled-components";
-import { css } from "styled-components";
+import styled, { css } from "styled-components";
 
 export const H2 = styled.h2`
   ${(props) =>
     props.uppercase === "uppercase" &&
     css`
       text-transform: uppercase;
+      font-size: 4.5rem;
+      line-height: 5.5rem;
+      padding: 2rem 0;
+    `}
+
+  ${(props) =>
+    props.uppercase === "uppercase2" &&
+    css`
+      text-transform: uppercase;
+      font-size: 7rem;
     `}
 
   ${(props) =>
     props.space === "marginTop" &&
     css`
-      padding-top: 2rem;
+      font-size: 3.5rem;
+      line-height: 5rem;
+      padding: 2rem 0;
     `}
 
-  font-size: 4.5rem;
   color: white;
   font-weight: 900;
-  padding: 2rem 0;
-  line-height: 5.5rem;
   position: relative;
 `;
