@@ -1,5 +1,7 @@
 import styled, { css } from "styled-components";
 import { useRef } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLinkedin } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
@@ -26,36 +28,32 @@ const StyledAppLayout = styled.div`
 `;
 
 const Footer = styled.div`
-  height: 100vh;
+  height: 15vh;
   width: 100%;
   background-color: black;
-  /* overflow: hidden; */
   position: relative;
+  overflow: hidden;
 `;
 
 const Contact = styled.div`
   height: 100vh;
   width: 100%;
   background-color: black;
-  /* overflow: hidden; */
   position: relative;
 `;
 
 const Noise = styled.div`
   position: absolute;
-  /* top: -50%;
-  left: -50%;
-  right: -50%;
-  bottom: -50%; */
   left: 0;
   width: 100%;
   height: 100%;
   background: transparent
     url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
   background-repeat: repeat;
-  animation: noiseBg 0.2s infinite;
+  /* animation: ${noiseBg} 0.2s infinite; */
   opacity: 0.9;
   visibility: visible;
+  /* overflow: hidden; */
 `;
 
 const DivLinks = styled.div`
@@ -111,6 +109,38 @@ const Input = styled.input`
   }
 `;
 
+const LineV2 = styled.div`
+  position: absolute;
+  width: 1px;
+  height: 8rem;
+  background-color: #464646;
+`;
+
+const ContainerRigths = styled.div`
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0 2rem;
+`;
+
+const Rigths = styled.p`
+  font-size: 1.5rem;
+  color: white;
+`;
+
+const RigthsLink = styled.a`
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  position: relative;
+  z-index: 100;
+
+  &:hover {
+    color: #0f5b5b;
+  }
+`;
+
 function AppLayout() {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
@@ -150,7 +180,7 @@ function AppLayout() {
       <Section type="margin">
         <Main>
           <div>
-            <H1>South Studio</H1>
+            <H1 type="title">South Studio</H1>
             <H2 uppercase="uppercase">
               he full spectrun of
               <br /> content creation
@@ -191,13 +221,10 @@ function AppLayout() {
                 Lets
               </H1>
               <H2 uppercase="uppercase2">connect!</H2>
+              <LineV2 />
             </div>
 
-            <div>
-              <Icon>FACE</Icon>
-              <Icon>link</Icon>
-              <Icon>instagram</Icon>
-            </div>
+            <FontAwesomeIcon icon={faLinkedin} />
           </DivLinks>
 
           <Form>
@@ -213,6 +240,19 @@ function AppLayout() {
           </Form>
         </Section>
       </Contact>
+
+      <Footer>
+        <Noise />
+        <Line />
+
+        <ContainerRigths>
+          <Rigths>
+            &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
+          </Rigths>
+          <RigthsLink href="#">Privacy Policy</RigthsLink>
+          <RigthsLink href="#">Cookie Policy</RigthsLink>
+        </ContainerRigths>
+      </Footer>
     </StyledAppLayout>
   );
 }

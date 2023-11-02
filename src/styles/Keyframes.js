@@ -64,9 +64,15 @@ export const scroll2 = keyframes`
 `;
 
 export const noiseBg = keyframes`
-    0% { transform: translate(0,0) }
-    10% { transform: translate(-5%,-5%) }
-    20% { transform: translate(-10%,5%) }
+    0% { 
+        transform: translate(0,0)
+     }
+    10% {
+         transform: translate(-5%,-5%)
+     }
+    20% { 
+        transform: translate(-10%,5%)
+     }
     30% { transform: translate(5%,-10%) }
     40% { transform: translate(-5%,15%) }
     50% { transform: translate(-10%,5%) }

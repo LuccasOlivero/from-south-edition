@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const SliderContainer = styled.div`
+  height: 200%;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
