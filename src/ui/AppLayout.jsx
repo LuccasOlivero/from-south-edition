@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLink } from "@fortawesome/free-solid-svg-icons";
@@ -18,129 +18,19 @@ import { Picture } from "./Picture";
 import { Main } from "./Main";
 import { SliderContainer } from "./SliderContainer";
 import { Line } from "./Line";
-import { noiseBg } from "../styles/Keyframes";
+import { Noise } from "./Noise";
+import { Contact, DivLinks } from "./Contact";
+import { LineV2 } from "./LineV2";
+import { Form } from "./Form";
+import { Input } from "./Input";
+import { Footer } from "./Footer";
+import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
+import { Outlet } from "react-router-dom";
 
 const StyledAppLayout = styled.div`
   width: 100%;
   height: 100vh;
   position: relative;
-  /* overflow-x: hidden; */
-`;
-
-const Footer = styled.div`
-  height: 15vh;
-  width: 100%;
-  background-color: black;
-  position: relative;
-  overflow: hidden;
-`;
-
-const Contact = styled.div`
-  height: 100vh;
-  width: 100%;
-  background-color: black;
-  position: relative;
-`;
-
-const Noise = styled.div`
-  position: absolute;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: transparent
-    url("http://assets.iceable.com/img/noise-transparent.png") repeat 0 0;
-  background-repeat: repeat;
-  /* animation: ${noiseBg} 0.2s infinite; */
-  opacity: 0.9;
-  visibility: visible;
-  /* overflow: hidden; */
-`;
-
-const DivLinks = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: start;
-  flex-direction: column;
-  color: white;
-  gap: 10rem;
-  width: 60%;
-`;
-
-const Form = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 3rem;
-  width: 50%;
-  position: relative;
-  z-index: 10;
-`;
-
-const Icon = styled.div`
-  font-size: 2rem;
-  color: cyan;
-`;
-
-const Input = styled.input`
-  backdrop-filter: blur(10px);
-  width: 100%;
-  height: 4rem;
-  background-color: transparent;
-  font-size: 1.5rem;
-  border: 1px solid white;
-  padding: 1rem 1.5rem;
-  color: white;
-  position: relative;
-
-  ${(props) =>
-    props.format === "textbox" &&
-    css`
-      height: 13rem;
-    `}
-
-  &:focus {
-    outline: none;
-  }
-
-  ::placeholder {
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 1.5rem; /* Ajusta la posición horizontal según tus necesidades */
-    font-size: 1.5rem; /* Ajusta el tamaño de fuente del placeholder */
-  }
-`;
-
-const LineV2 = styled.div`
-  position: absolute;
-  width: 1px;
-  height: 8rem;
-  background-color: #464646;
-`;
-
-const ContainerRigths = styled.div`
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 0 2rem;
-`;
-
-const Rigths = styled.p`
-  font-size: 1.5rem;
-  color: white;
-`;
-
-const RigthsLink = styled.a`
-  font-size: 1.5rem;
-  color: white;
-  cursor: pointer;
-  position: relative;
-  z-index: 100;
-
-  &:hover {
-    color: #0f5b5b;
-  }
 `;
 
 function AppLayout() {
@@ -195,6 +85,8 @@ function AppLayout() {
               <Picture />
             </div>
           </SpinningText>
+
+          <Outlet></Outlet>
         </Main>
       </Section>
 

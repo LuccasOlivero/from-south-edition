@@ -58,7 +58,7 @@ const Span = styled.span`
     width: 0;
     height: 2px;
     background-color: #0f5b5b;
-    transition: width 0.6s ease-out;
+    transition: width 0.5s ease-out;
   }
 
   &:hover::after {
