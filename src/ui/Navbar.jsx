@@ -24,6 +24,7 @@ const StyledNavLink = styled(NavLink)`
     display: flex;
     align-items: center;
     gap: 1.2rem;
+    text-decoration: none;
 
     background-color: transparent;
     text-transform: uppercase;

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const Buttom = styled.button`
+  backdrop-filter: blur(10px);
   width: 16rem;
   height: 4.5rem;
   background-color: transparent;

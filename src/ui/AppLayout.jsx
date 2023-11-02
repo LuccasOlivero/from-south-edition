@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components";
 import { useRef } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLinkedin } from "@fortawesome/free-solid-svg-icons";
+import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
@@ -59,6 +59,7 @@ const Noise = styled.div`
 const DivLinks = styled.div`
   display: flex;
   justify-content: center;
+  align-items: start;
   flex-direction: column;
   color: white;
   gap: 10rem;
@@ -81,6 +82,7 @@ const Icon = styled.div`
 `;
 
 const Input = styled.input`
+  backdrop-filter: blur(10px);
   width: 100%;
   height: 4rem;
   background-color: transparent;
@@ -224,7 +226,7 @@ function AppLayout() {
               <LineV2 />
             </div>
 
-            <FontAwesomeIcon icon={faLinkedin} />
+            <FontAwesomeIcon icon={faLink} size="2x" />
           </DivLinks>
 
           <Form>
