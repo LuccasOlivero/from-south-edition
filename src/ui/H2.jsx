@@ -15,6 +15,7 @@ export const H2 = styled.h2`
     css`
       text-transform: uppercase;
       font-size: 7rem;
+      line-height: 7rem;
     `}
 
   ${(props) =>

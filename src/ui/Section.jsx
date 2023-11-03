@@ -20,7 +20,6 @@ export const Section = styled.section`
     css`
       display: flex;
       height: 100%;
-      /* background-color: red; */
       justify-content: space-between;
     `}
 

@@ -25,7 +25,6 @@ import { Form } from "./Form";
 import { Input } from "./Input";
 import { Footer } from "./Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
-import { Outlet } from "react-router-dom";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -85,8 +84,6 @@ function AppLayout() {
               <Picture />
             </div>
           </SpinningText>
-
-          <Outlet></Outlet>
         </Main>
       </Section>
 

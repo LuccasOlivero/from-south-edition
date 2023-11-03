@@ -13,6 +13,7 @@ const Container = styled.div`
   font-weight: bold;
   right: 0;
   bottom: 0;
+  margin-bottom: 6rem;
 `;
 
 const TextWrapper = styled.div`
