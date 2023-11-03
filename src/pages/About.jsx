@@ -21,6 +21,7 @@ const Paragraph = styled.p`
   line-height: 3.5rem;
   margin: 3rem 0rem;
   text-wrap: balance;
+  width: 100%;
 `;
 
 const Video = styled.div`
