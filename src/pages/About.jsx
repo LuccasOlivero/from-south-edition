@@ -13,6 +13,7 @@ import SliderGif from "../ui/SliderGif";
 import SliderGif2 from "../ui/SliderGiff2";
 import { Footer } from "../ui/Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
+import Form from "../components.jsx/CompleteForm";
 
 const Paragraph = styled.p`
   color: white;
@@ -88,6 +89,8 @@ function About() {
           </Video>
         </Main>
       </Section>
+
+      <Form></Form>
 
       <Footer>
         <Noise></Noise>

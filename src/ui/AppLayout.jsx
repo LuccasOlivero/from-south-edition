@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { useRef } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLink } from "@fortawesome/free-solid-svg-icons";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
@@ -19,12 +17,9 @@ import { Main } from "./Main";
 import { SliderContainer } from "./SliderContainer";
 import { Line } from "./Line";
 import { Noise } from "./Noise";
-import { Contact, DivLinks } from "./Contact";
-import { LineV2 } from "./LineV2";
-import { Form } from "./Form";
-import { Input } from "./Input";
 import { Footer } from "./Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
+import CompleteForm from "../components.jsx/CompleteForm";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -65,9 +60,7 @@ function AppLayout() {
 
         <Slider1 scroll="scroll1" />
       </SliderContainer>
-
       <Navbar />
-
       <Section type="margin">
         <Main>
           <div>
@@ -86,9 +79,7 @@ function AppLayout() {
           </SpinningText>
         </Main>
       </Section>
-
       <Line />
-
       <Section type="text">
         <H2 as="p" space="marginTop">
           At FromSouth, we know that no two projects are alike. We approach each
@@ -101,36 +92,7 @@ function AppLayout() {
         <Noise />
       </Section>
 
-      <Contact>
-        <Line />
-        <Noise />
-
-        <Section type="flex">
-          <DivLinks>
-            <div>
-              <H1 type="form" as="h2">
-                Lets
-              </H1>
-              <H2 uppercase="uppercase2">connect!</H2>
-              <LineV2 />
-            </div>
-
-            <FontAwesomeIcon icon={faLink} size="2x" />
-          </DivLinks>
-
-          <Form>
-            <Input type="text" placeholder="Name" />
-            <Input type="email" placeholder="Email" />
-            <Input
-              id="myInput"
-              type="text-box"
-              placeholder="Type your message..."
-              format="textbox"
-            />
-            <Buttom>Submit</Buttom>
-          </Form>
-        </Section>
-      </Contact>
+      <CompleteForm></CompleteForm>
 
       <Footer>
         <Noise />

@@ -5,7 +5,6 @@ import AppLayout from "./ui/AppLayout";
 import Projects from "./pages/Projects";
 import Error from "./pages/Error";
 import About from "./pages/About";
-import Services from "./pages/Services";
 
 function App() {
   return (
@@ -19,8 +18,6 @@ function App() {
 
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
-          <Route path="/services" element={<Services />} />
-
           <Route path="*" element={<Error />} />
         </Routes>
       </BrowserRouter>

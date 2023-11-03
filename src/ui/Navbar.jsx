@@ -80,11 +80,6 @@ function Navbar() {
           </StyledNavLink>
         </li>
         <li>
-          <StyledNavLink to="/services">
-            <Span>services</Span>
-          </StyledNavLink>
-        </li>
-        <li>
           <StyledNavLink to="/projects">
             <Span>projects</Span>
           </StyledNavLink>

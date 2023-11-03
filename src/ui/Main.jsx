@@ -7,4 +7,5 @@ export const Main = styled.main`
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding-bottom: 5rem;
 `;
