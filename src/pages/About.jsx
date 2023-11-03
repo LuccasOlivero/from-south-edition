@@ -20,6 +20,7 @@ const Paragraph = styled.p`
   font-size: 2.5rem;
   line-height: 3.5rem;
   margin: 3rem 0rem;
+  text-wrap: balance;
 `;
 
 const Video = styled.div`
