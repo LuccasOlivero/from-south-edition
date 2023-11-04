@@ -15,4 +15,10 @@ export const Buttom = styled.button`
     background-color: white;
     color: black;
   }
+
+  @media (max-width: 768px) {
+    width: 10rem;
+    font-size: 1rem;
+    height: 3rem;
+  }
 `;

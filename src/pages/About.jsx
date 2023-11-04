@@ -29,6 +29,10 @@ const Video = styled.div`
   height: 40rem;
   position: relative;
   margin: 0 2rem;
+
+  @media (max-width: 1440px) {
+    /* padding: 0 6rem; */
+  }
 `;
 
 function About() {
@@ -66,7 +70,7 @@ function About() {
 
       <Section>
         <Noise></Noise>
-        <Main type="centerY">
+        <Main>
           <div>
             <H2 uppercase="uppercase2">since 2021</H2>
             <Paragraph>

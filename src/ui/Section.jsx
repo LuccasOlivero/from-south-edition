@@ -35,6 +35,13 @@ export const Section = styled.section`
       background-color: black;
     `}
 
+    @media (max-width: 1440px) {
+    /* width: 70%; */
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 6rem;
+  }
 
   padding: 0 13rem;
   height: 100%;

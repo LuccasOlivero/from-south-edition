@@ -6,4 +6,12 @@ export const Footer = styled.div`
   background-color: black;
   position: relative;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    height: 10vh;
+  }
+
+  @media (max-width: 425px) {
+    padding: 0 1rem;
+  }
 `;

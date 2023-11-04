@@ -14,6 +14,10 @@ export const H1 = styled.main`
       margin-top: 9rem;
     `}
 
+    @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+
   -webkit-text-stroke: 1px white;
   font-weight: bold;
   color: transparent;

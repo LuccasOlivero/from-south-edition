@@ -13,7 +13,11 @@ const Container = styled.div`
   font-weight: bold;
   right: 0;
   bottom: 0;
-  margin-bottom: 6rem;
+  margin-bottom: 4rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const TextWrapper = styled.div`

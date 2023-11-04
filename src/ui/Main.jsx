@@ -19,6 +19,7 @@ export const Main = styled.main`
   justify-content: space-between;
   position: relative;
   padding-bottom: 5rem;
+  width: 100%;
 `;
 
 Main.defaultProps = {

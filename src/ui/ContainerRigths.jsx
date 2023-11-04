@@ -6,11 +6,18 @@ export const ContainerRigths = styled.div`
   justify-content: center;
   align-items: center;
   gap: 0 2rem;
+  @media (max-width: 768px) {
+    gap: 0 1rem;
+  }
 `;
 
 export const Rigths = styled.p`
   font-size: 1.5rem;
   color: white;
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 
 export const RigthsLink = styled.a`
@@ -22,5 +29,9 @@ export const RigthsLink = styled.a`
 
   &:hover {
     color: #0f5b5b;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;

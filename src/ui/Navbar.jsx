@@ -12,6 +12,9 @@ const Nav = styled.nav`
   width: 100%;
   z-index: 100;
   padding: 0 13rem;
+  @media (max-width: 768px) {
+    padding: 0 5rem;
+  }
 `;
 
 const NavList = styled.ul`
@@ -35,6 +38,12 @@ const StyledNavLink = styled(NavLink)`
     padding: 1.2rem 2.4rem;
     transition: all 0.3s;
     position: relative;
+
+    @media (max-width: 768px) {
+      font-size: 1.1rem;
+      gap: 1rem;
+      padding: 0 1rem;
+    }
   }
 `;
 
@@ -45,6 +54,11 @@ const Logo = styled.picture`
   height: 5rem;
   width: 5rem;
   display: block;
+
+  @media (max-width: 768px) {
+    height: 3rem;
+    width: 3rem;
+  }
 `;
 
 const Span = styled.span`
