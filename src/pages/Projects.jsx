@@ -11,11 +11,20 @@ import { Section } from "../ui/Section";
 const Row = styled.div`
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 `;
 
 const Column = styled.div`
   flex: 25%;
   padding-top: 2rem;
+
+  @media (max-width: 768px) {
+    flex: 50%;
+  }
+
+  @media (max-width: 425px) {
+    flex: 100%;
+  }
 `;
 
 const Img = styled.img`
@@ -28,6 +37,14 @@ const Img = styled.img`
 const VideoContainer = styled.div`
   width: 100%;
   height: 35rem;
+
+  @media (max-width: 1024px) {
+    height: 25rem;
+  }
+
+  @media (max-width: 768px) {
+    height: 20rem;
+  }
 `;
 
 const Video = styled.video`

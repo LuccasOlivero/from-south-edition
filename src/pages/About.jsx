@@ -18,20 +18,41 @@ import Form from "../components.jsx/CompleteForm";
 const Paragraph = styled.p`
   color: white;
   font-size: 2.5rem;
-  line-height: 3.5rem;
-  margin: 3rem 0rem;
+  line-height: 3rem;
+  margin: 2rem 0rem;
   text-wrap: balance;
   width: 100%;
+
+  @media (max-width: 1440px) {
+    font-size: 1.5em;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    line-height: 2.5rem;
+  }
 `;
 
 const Video = styled.div`
-  width: 190rem;
-  height: 40rem;
+  width: 35%;
+  height: 90%;
   position: relative;
   margin: 0 2rem;
+  max-height: 70rem;
+  max-width: 70rem;
 
-  @media (max-width: 1440px) {
-    /* padding: 0 6rem; */
+  @media (max-width: 768px) {
+    width: 80%;
+  }
+`;
+
+const Test = styled.div`
+  width: 50%;
+  max-height: 70rem;
+  max-width: 70rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
   }
 `;
 
@@ -71,7 +92,7 @@ function About() {
       <Section>
         <Noise></Noise>
         <Main>
-          <div>
+          <Test>
             <H2 uppercase="uppercase2">since 2021</H2>
             <Paragraph>
               Step into the world of short form video editing where magic
@@ -86,7 +107,7 @@ function About() {
               collaborate and make your vision come to life through the art of
               video editing. 🎥✨
             </Paragraph>
-          </div>
+          </Test>
 
           <Video>
             <video width="100%" height="100%" controls>

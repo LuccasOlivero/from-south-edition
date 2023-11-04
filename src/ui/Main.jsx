@@ -11,15 +11,20 @@ export const Main = styled.main`
     props.type === "viewport" &&
     css`
       height: 100vh;
+      justify-content: space-between;
     `}
-
+justify-content:center;
   align-items: center;
   padding-top: 6rem;
   display: flex;
-  justify-content: space-between;
   position: relative;
   padding-bottom: 5rem;
   width: 100%;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
 Main.defaultProps = {
