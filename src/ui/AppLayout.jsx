@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
+import { motion, useAnimation, useInView } from "framer-motion";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
@@ -30,6 +31,17 @@ const StyledAppLayout = styled.div`
 function AppLayout() {
   const svgRef = useRef(null);
   const containerRef = useRef(null);
+
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+
+  const mainControls = useAnimation();
+
+  useEffect(() => {
+    if (isInView) {
+      mainControls.start("visible");
+    }
+  }, [isInView, mainControls]);
 
   const handleMouseMove = (e) => {
     const container = containerRef.current;
@@ -63,14 +75,22 @@ function AppLayout() {
       <Navbar />
       <Section type="margin">
         <Main>
-          <div>
+          <motion.div
+            variants={{
+              hidden: { opacity: 0, y: 300 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate="visible"
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
             <H1 type="title">South Studio</H1>
             <H2 uppercase="uppercase">
               he full spectrun of
               <br /> content creation
             </H2>
             <Buttom>Selected Work</Buttom>
-          </div>
+          </motion.div>
 
           <SpinningText text="watch show reel - watch show reel - ">
             <div ref={svgRef}>
@@ -81,13 +101,23 @@ function AppLayout() {
       </Section>
       <Line />
       <Section type="text">
-        <H2 as="p" space="marginTop">
-          At FromSouth, we know that no two projects are alike. We approach each
-          job with a fresh and expansive mindset to create a curated, customized
-          experience for every client. We love pushing the limits of what is
-          achievable to bring each design into a unique reality. We specialize
-          in short-form video editing, allowing us to provide a creative and
-          effective approach to visual communication.
+        <H2 as="p" space="marginTop" ref={ref}>
+          <motion.span
+            variants={{
+              hidden: { opacity: 0, y: 75 },
+              visible: { opacity: 1, y: 0 },
+            }}
+            initial="hidden"
+            animate={mainControls}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
+            At FromSouth, we know that no two projects are alike. We approach
+            each job with a fresh and expansive mindset to create a curated,
+            customized experience for every client. We love pushing the limits
+            of what is achievable to bring each design into a unique reality. We
+            specialize in short-form video editing, allowing us to provide a
+            creative and effective approach to visual communication.
+          </motion.span>
         </H2>
         <Noise />
       </Section>
