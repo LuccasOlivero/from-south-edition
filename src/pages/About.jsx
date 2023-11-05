@@ -71,7 +71,7 @@ function About() {
       <Navbar />
 
       <Section type="text">
-        <Main type="centerY">
+        <Main>
           <div>
             <H1 type="title">south studio</H1>
             <H2 uppercase="uppercase2">pushing the creative limitis</H2>

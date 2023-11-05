@@ -5,6 +5,7 @@ export const Main = styled.main`
     props.type === "full" &&
     css`
       height: 100%;
+      justify-content: center;
     `}
 
   ${(props) =>
@@ -13,7 +14,7 @@ export const Main = styled.main`
       height: 100vh;
       justify-content: space-between;
     `}
-justify-content:center;
+    
   align-items: center;
   padding-top: 6rem;
   display: flex;
