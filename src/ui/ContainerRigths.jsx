@@ -20,15 +20,17 @@ export const Rigths = styled.p`
   }
 `;
 
-export const RigthsLink = styled.a`
+export const RigthsLink = styled.span`
   font-size: 1.5rem;
   color: white;
   cursor: pointer;
   position: relative;
   z-index: 100;
+  border-bottom: 1px solid white;
 
   &:hover {
     color: #0f5b5b;
+    border-bottom: 1px solid #0f5b5b;
   }
 
   @media (max-width: 768px) {

@@ -12,7 +12,7 @@ import { Section } from "../ui/Section";
 import { Row } from "../ui/Row";
 import { Column } from "../ui/Column";
 import { VideoContainer } from "../ui/VideoContainer";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Img = styled.img`
   width: 100%;
@@ -167,14 +167,19 @@ function Projects() {
         </Main>
       </Section>
       <Footer>
-        <Noise></Noise>
-        <Line></Line>
+        <Noise />
+        <Line />
+
         <ContainerRigths>
           <Rigths>
             &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
           </Rigths>
-          <RigthsLink href="#">Privacy Policy</RigthsLink>
-          <RigthsLink href="#">Cookie Policy</RigthsLink>
+          <NavLink to="/policy/privacy-policy">
+            <RigthsLink>Privacy Policy</RigthsLink>
+          </NavLink>
+          <NavLink to="/policy/cookie-policy">
+            <RigthsLink>Cookie Policy</RigthsLink>
+          </NavLink>
         </ContainerRigths>
       </Footer>
     </>

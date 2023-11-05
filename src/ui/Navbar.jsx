@@ -19,6 +19,7 @@ const Nav = styled.nav`
 
 const NavList = styled.ul`
   display: flex;
+  gap: 2.4rem;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -35,7 +36,7 @@ const StyledNavLink = styled(NavLink)`
     color: white;
     font-size: 1.5rem;
     font-weight: 600;
-    padding: 1.2rem 2.4rem;
+    padding: 1.2rem 0;
     transition: all 0.3s;
     position: relative;
 

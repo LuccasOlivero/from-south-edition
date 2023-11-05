@@ -45,7 +45,7 @@ a {
 }
 
 ul {
-  list-style: none;
+  /* list-style: none; */
 }
 
 p,

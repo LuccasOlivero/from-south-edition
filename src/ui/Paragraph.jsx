@@ -1,10 +1,31 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 
 export const Paragraph = styled.p`
+  ${(props) =>
+    props.type === "policy" &&
+    css`
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin: 0.5rem 0;
+    `}
+
+  ${(props) =>
+    props.type === "policy2" &&
+    css`
+      font-size: 2rem;
+      line-height: 2.5rem;
+      margin: 0.5rem 0 6rem 0;
+    `}
+
+  ${(props) =>
+    props.type === "default" &&
+    css`
+      font-size: 2.5rem;
+      line-height: 3rem;
+      margin: 2rem 0rem;
+    `}
+
   color: white;
-  font-size: 2.5rem;
-  line-height: 3rem;
-  margin: 2rem 0rem;
   text-wrap: balance;
   width: 100%;
 
@@ -17,3 +38,7 @@ export const Paragraph = styled.p`
     line-height: 2.5rem;
   }
 `;
+
+Paragraph.defaultProps = {
+  type: "default",
+};

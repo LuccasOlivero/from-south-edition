@@ -142,8 +142,12 @@ function AppLayout() {
           <Rigths>
             &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
           </Rigths>
-          <RigthsLink href="#">Privacy Policy</RigthsLink>
-          <RigthsLink href="#">Cookie Policy</RigthsLink>
+          <NavLink to="/policy/privacy-policy">
+            <RigthsLink>Privacy Policy</RigthsLink>
+          </NavLink>
+          <NavLink to="/policy/cookie-policy">
+            <RigthsLink>Cookie Policy</RigthsLink>
+          </NavLink>
         </ContainerRigths>
       </Footer>
     </StyledAppLayout>

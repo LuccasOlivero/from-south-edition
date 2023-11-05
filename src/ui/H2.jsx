@@ -26,6 +26,14 @@ export const H2 = styled.h2`
       padding: 2rem 0;
     `}
 
+    ${(props) =>
+    props.space === "marginTop2" &&
+    css`
+      font-size: 7rem;
+      /* line-height: 5rem; */
+      padding-top: 9rem;
+    `}
+
   @media (max-width: 1024px) {
     font-size: 3rem;
     line-height: 4rem;

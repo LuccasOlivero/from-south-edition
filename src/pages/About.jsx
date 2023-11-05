@@ -19,7 +19,7 @@ import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import Form from "../components.jsx/CompleteForm";
 import { Paragraph } from "../ui/Paragraph";
 import { Video } from "../ui/Video";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const Test = styled.div`
   width: 50%;
@@ -142,14 +142,19 @@ function About() {
       <Form></Form>
 
       <Footer>
-        <Noise></Noise>
-        <Line></Line>
+        <Noise />
+        <Line />
+
         <ContainerRigths>
           <Rigths>
             &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
           </Rigths>
-          <RigthsLink href="#">Privacy Policy</RigthsLink>
-          <RigthsLink href="#">Cookie Policy</RigthsLink>
+          <NavLink to="/policy/privacy-policy">
+            <RigthsLink>Privacy Policy</RigthsLink>
+          </NavLink>
+          <NavLink to="/policy/cookie-policy">
+            <RigthsLink>Cookie Policy</RigthsLink>
+          </NavLink>
         </ContainerRigths>
       </Footer>
     </>

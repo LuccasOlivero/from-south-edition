@@ -5,6 +5,8 @@ import AppLayout from "./ui/AppLayout";
 import Projects from "./pages/Projects";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
+import PrivatePolicy from "./pages/PrivatePolicy";
+import CookiePolicy from "./pages/CookiePolicy";
 
 function App() {
   return (
@@ -18,6 +20,8 @@ function App() {
 
           <Route path="/about" element={<About />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/policy/privacy-policy" element={<PrivatePolicy />} />
+          <Route path="/policy/cookie-policy" element={<CookiePolicy />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
