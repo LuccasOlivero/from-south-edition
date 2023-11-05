@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { useEffect } from "react";
+import { motion } from "framer-motion";
 
 import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { Footer } from "../ui/Footer";
@@ -7,25 +9,10 @@ import { Main } from "../ui/Main";
 import Navbar from "../ui/Navbar";
 import { Noise } from "../ui/Noise";
 import { Section } from "../ui/Section";
-
-const Row = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`;
-
-const Column = styled.div`
-  flex: 25%;
-  padding-top: 2rem;
-
-  @media (max-width: 768px) {
-    flex: 50%;
-  }
-
-  @media (max-width: 425px) {
-    flex: 100%;
-  }
-`;
+import { Row } from "../ui/Row";
+import { Column } from "../ui/Column";
+import { VideoContainer } from "../ui/VideoContainer";
+import { useLocation } from "react-router-dom";
 
 const Img = styled.img`
   width: 100%;
@@ -34,25 +21,19 @@ const Img = styled.img`
   padding: 14px;
 `;
 
-const VideoContainer = styled.div`
-  width: 100%;
-  height: 35rem;
-
-  @media (max-width: 1024px) {
-    height: 25rem;
-  }
-
-  @media (max-width: 768px) {
-    height: 20rem;
-  }
-`;
-
 const Video = styled.video`
   width: 100%;
   height: 100%;
 `;
 
 function Projects() {
+  const location = useLocation();
+
+  useEffect(() => {
+    // Scrolls to the top when the location changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <>
       <Navbar />
@@ -60,87 +41,127 @@ function Projects() {
         <Main type="full">
           <Row>
             <Column>
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img2.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img4.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img3.png" alt="" />
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.6, delay: 0.3 }}
+              >
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img2.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img4.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img3.png" alt="" />
+              </motion.span>
             </Column>
 
             <Column>
-              <Img src="/img1.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img3.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img5.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.6, delay: 0.55 }}
+              >
+                <Img src="/img1.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img3.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img5.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+              </motion.span>
             </Column>
 
             <Column>
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img2.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img4.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img3.png" alt="" />
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.6, delay: 0.8 }}
+              >
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img2.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img4.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img3.png" alt="" />
+              </motion.span>
             </Column>
 
             <Column>
-              <Img src="/img1.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <Img src="/img3.png" alt="" />
-              <Img src="/img4.png" alt="" />
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
-              <VideoContainer>
-                <Video controls>
-                  <source src="/video.mp4" type="video/mp4" />
-                </Video>
-              </VideoContainer>
+              <motion.span
+                variants={{
+                  hidden: { opacity: 0, y: 100 },
+                  visible: { opacity: 1, y: 0 },
+                }}
+                initial="hidden"
+                animate="visible"
+                transition={{ duration: 0.6, delay: 1 }}
+              >
+                <Img src="/img1.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <Img src="/img3.png" alt="" />
+                <Img src="/img4.png" alt="" />
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+                <VideoContainer>
+                  <Video controls>
+                    <source src="/video.mp4" type="video/mp4" />
+                  </Video>
+                </VideoContainer>
+              </motion.span>
             </Column>
           </Row>
         </Main>

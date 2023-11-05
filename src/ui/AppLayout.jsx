@@ -21,6 +21,7 @@ import { Noise } from "./Noise";
 import { Footer } from "./Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
 import CompleteForm from "../components.jsx/CompleteForm";
+import { useLocation } from "react-router-dom";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -29,12 +30,13 @@ const StyledAppLayout = styled.div`
 `;
 
 function AppLayout() {
+  const location = useLocation();
+
   const svgRef = useRef(null);
   const containerRef = useRef(null);
 
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-
   const mainControls = useAnimation();
 
   useEffect(() => {
@@ -61,18 +63,23 @@ function AppLayout() {
     }
   };
 
+  useEffect(() => {
+    // Scrolls to the top when the location changes
+    window.scrollTo(0, 0);
+  }, [location]);
+
   return (
     <StyledAppLayout ref={containerRef} onMouseMove={handleMouseMove}>
       <SliderContainer>
         <Slider1 scroll="scroll1" />
         <Slider2 scroll="scroll2" />
-
         <SliderGif scroll="scroll1" />
         <SliderGif2 scroll="scroll2" />
-
         <Slider1 scroll="scroll1" />
       </SliderContainer>
+
       <Navbar />
+
       <Section type="margin">
         <Main>
           <motion.div
@@ -104,12 +111,12 @@ function AppLayout() {
         <H2 as="p" space="marginTop" ref={ref}>
           <motion.span
             variants={{
-              hidden: { opacity: 0, y: 75 },
+              hidden: { opacity: 0, y: 300 },
               visible: { opacity: 1, y: 0 },
             }}
             initial="hidden"
             animate={mainControls}
-            transition={{ duration: 0.5, delay: 0.25 }}
+            transition={{ duration: 0.5, delay: 1 }}
           >
             At FromSouth, we know that no two projects are alike. We approach
             each job with a fresh and expansive mindset to create a curated,
