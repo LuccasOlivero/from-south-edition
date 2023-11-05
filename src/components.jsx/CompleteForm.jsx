@@ -10,6 +10,7 @@ import { faLink } from "@fortawesome/free-solid-svg-icons";
 import { Input } from "../ui/Input";
 import { Buttom } from "../ui/Buttom";
 import { Form } from "../ui/Form";
+import { NavLink } from "react-router-dom";
 
 function CompleteForm() {
   return (
@@ -27,7 +28,11 @@ function CompleteForm() {
             <LineV2 />
           </div>
 
-          <FontAwesomeIcon icon={faLink} size="2x" />
+          <NavLink to="https://www.linkedin.com/in/lucas-olivero-319090264/">
+            <Buttom type="circle">
+              <FontAwesomeIcon icon={faLink} size="2x" />
+            </Buttom>
+          </NavLink>
         </DivLinks>
 
         <Form>
@@ -39,6 +44,7 @@ function CompleteForm() {
             placeholder="Type your message..."
             format="textbox"
           />
+
           <Buttom>Submit</Buttom>
         </Form>
       </Section>

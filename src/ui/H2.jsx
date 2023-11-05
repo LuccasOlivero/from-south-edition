@@ -26,7 +26,7 @@ export const H2 = styled.h2`
       padding: 2rem 0;
     `}
 
-    @media (max-width: 1024px) {
+  @media (max-width: 1024px) {
     font-size: 3rem;
     line-height: 4rem;
   }

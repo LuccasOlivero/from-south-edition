@@ -21,7 +21,7 @@ import { Noise } from "./Noise";
 import { Footer } from "./Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
 import CompleteForm from "../components.jsx/CompleteForm";
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -96,7 +96,10 @@ function AppLayout() {
               he full spectrun of
               <br /> content creation
             </H2>
-            <Buttom>Selected Work</Buttom>
+
+            <NavLink to="/projects">
+              <Buttom>Selected Work</Buttom>
+            </NavLink>
           </motion.div>
 
           <SpinningText text="watch show reel - watch show reel - ">

@@ -21,7 +21,6 @@ export const Section = styled.section`
     props.type === "flex" &&
     css`
       display: flex;
-      height: 100%;
       justify-content: space-between;
       background: radial-gradient(at left top, #010101, #000000e2);
     `}
@@ -30,14 +29,9 @@ export const Section = styled.section`
     props.type === "deff" &&
     css`
       display: flex;
-      height: 100%;
       justify-content: center;
       background-color: black;
     `}
-
-    @media (max-width: 1440px) {
-    /* width: 70%; */
-  }
 
   @media (max-width: 768px) {
     padding: 0 6rem;

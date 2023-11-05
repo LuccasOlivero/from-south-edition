@@ -14,6 +14,13 @@ export const H1 = styled.main`
       margin-top: 9rem;
     `}
 
+    ${(props) =>
+    props.type === "bigger" &&
+    css`
+      font-size: 13rem;
+      letter-spacing: 6px;
+    `}
+
     @media (max-width: 768px) {
     font-size: 4rem;
   }
