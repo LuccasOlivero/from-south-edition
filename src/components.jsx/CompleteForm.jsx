@@ -15,7 +15,8 @@ import { Input } from "../ui/Input";
 import { Buttom } from "../ui/Buttom";
 import { Form } from "../ui/Form";
 import styled from "styled-components";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import toast from "react-hot-toast";
 
 const TextArea = styled.textarea`
   backdrop-filter: blur(10px);
@@ -31,30 +32,36 @@ const TextArea = styled.textarea`
   &:focus {
     outline: none;
   }
+
+  &:disabled {
+    background-color: #181818;
+  }
 `;
 
 function CompleteForm() {
-  const { register, handleSubmit } = useForm();
+  const [isLoading, setIsLoading] = useState(false);
+  const { register, handleSubmit, reset } = useForm();
   const form = useRef(null);
 
-  function onSubmit(data) {
-    console.log(data);
-
-    emailjs
-      .sendForm(
-        "service_kywvyrk",
-        "template_gpuvigi",
-        form.current,
-        "aJJGUNBmIZNi_LrLb"
-      )
-      .then(
-        (result) => {
-          console.log(result.text);
-        },
-        (error) => {
-          console.log(error.text);
-        }
-      );
+  async function onSubmit() {
+    try {
+      setIsLoading(true);
+      await emailjs
+        .sendForm(
+          "service_kywvyrk",
+          "template_gpuvigi",
+          form.current,
+          "aJJGUNBmIZNi_LrLb"
+        )
+        .then(() => {
+          toast.success("mensage enviado correctamente");
+          reset();
+        });
+      setIsLoading(false);
+    } catch (err) {
+      console.log(err);
+      toast.error("El mensaje no puedo enviarse, por favor, intente de nuevo");
+    }
   }
 
   return (
@@ -80,50 +87,37 @@ function CompleteForm() {
 
         <Form onSubmit={handleSubmit(onSubmit)} ref={form}>
           <Input
+            name="user_name"
             id="user_name"
             type="text"
             placeholder="Name"
-            name="user_name"
-            {...register("user_name", { required: "This filed is required" })}
+            {...register("user_name")}
+            required
+            disabled={isLoading}
           />
           <Input
             name="user_email"
             id="user_email"
             type="email"
             placeholder="Email"
-            {...register("user_email", { required: "This filed is required" })}
+            {...register("user_email")}
+            required
+            disabled={isLoading}
           />
           <TextArea
             name="message"
             id="message"
             type="text-box"
             placeholder="Type your message..."
-            {...register("message", { required: "This filed is required" })}
+            {...register("message")}
+            required
+            disabled={isLoading}
           />
 
-          <Buttom id="button">Submit</Buttom>
+          <Buttom id="button" disabled={isLoading}>
+            {isLoading ? "Sending..." : "Submit"}
+          </Buttom>
         </Form>
-
-        {/* <form id="form">
-          <div className="field">
-            <label htmlFor="from_name">from_name</label>
-            <input type="text" name="from_name" id="from_name" />
-          </div>
-          <div className="field">
-            <label htmlFor="message">message</label>
-            <input type="text" name="message" id="message" />
-          </div>
-          <div className="field">
-            <label htmlFor="email_id">email_id</label>
-            <input type="text" name="email_id" id="email_id" />
-          </div>
-          <div className="field">
-            <label htmlFor="reply_to">reply_to</label>
-            <input type="text" name="reply_to" id="reply_to" />
-          </div>
-
-          <input type="submit" id="button" value="Send Email" />
-        </form> */}
       </Section>
     </Contact>
   );

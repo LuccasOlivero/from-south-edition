@@ -28,6 +28,10 @@ export const Buttom = styled.button`
     color: black;
   }
 
+  &:disabled {
+    background-color: #181818;
+  }
+
   @media (max-width: 768px) {
     width: 10rem;
     font-size: 1rem;

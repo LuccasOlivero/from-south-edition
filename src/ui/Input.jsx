@@ -21,6 +21,10 @@ export const Input = styled.input`
     outline: none;
   }
 
+  &:disabled {
+    background-color: #181818;
+  }
+
   ::placeholder {
     color: white;
     position: absolute;

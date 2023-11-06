@@ -22,7 +22,7 @@ export const Paragraph = styled.p`
     css`
       font-size: 2.5rem;
       line-height: 3rem;
-      margin: 2rem 0rem;
+      margin: 1rem 0rem;
     `}
 
   color: white;

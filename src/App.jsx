@@ -7,6 +7,7 @@ import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
 import PrivatePolicy from "./pages/PrivatePolicy";
 import CookiePolicy from "./pages/CookiePolicy";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   return (
@@ -25,6 +26,25 @@ function App() {
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </BrowserRouter>
+
+      <Toaster
+        postition="top-center"
+        gutter={12}
+        containerStyle={{ margin: "8px" }}
+        toastOptions={{
+          success: {
+            duration: 3000,
+          },
+          error: {
+            duration: 5000,
+          },
+          style: {
+            fontSize: "16px",
+            maxWidth: "500px",
+            padding: "16px 24px",
+          },
+        }}
+      ></Toaster>
     </>
   );
 }

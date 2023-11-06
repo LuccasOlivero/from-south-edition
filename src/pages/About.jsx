@@ -103,7 +103,9 @@ function About() {
               animate={mainControls}
               transition={{ duration: 0.5, delay: 1.5 }}
             >
-              <H2 uppercase="uppercase2">since 2021</H2>
+              <H1 type="form" as="h2">
+                since 2021
+              </H1>
               <Paragraph>
                 Step into the world of short form video editing where magic
                 happens! With a journey that began in 2021, I&apos;ve been
