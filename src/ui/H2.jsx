@@ -52,4 +52,5 @@ export const H2 = styled.h2`
   color: white;
   font-weight: 900;
   position: relative;
+  z-index: 100;
 `;

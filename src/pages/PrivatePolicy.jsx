@@ -9,6 +9,7 @@ import { Line } from "../ui/Line";
 import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Strong } from "../ui/Strong";
 
 const Container = styled.div`
   display: flex;
@@ -49,7 +50,7 @@ function PrivatePolicy() {
         </Paragraph>
         <H2 space="marginTop">Identity & access</H2>
         <Paragraph type="policy">
-          When you sign up for a Prysm product, we ask for identifying
+          When you sign up for a South Studio product, we ask for identifying
           information such as your name, email address, and maybe a company
           name. That&apos;s so you can personalize your new account, and we can
           send you product updates and other essential information. We may also
@@ -65,25 +66,25 @@ function PrivatePolicy() {
         </Paragraph>
         <H2 space="marginTop">Billing information</H2>
         <Paragraph type="policy">
-          If you sign up for a paid Prysm product, you will be asked to provide
-          your payment information and billing address. Credit card information
-          is submitted directly to our payment processor and doesn’t hit Prysm
-          servers. We store a record of the payment transaction, including the
-          last 4 digits of the credit card number, for purposes of account
-          history, invoicing, and billing support. We store your billing address
-          so we can charge you for service, calculate any sales tax due, send
-          you invoices, and detect fraudulent credit card transactions. We
-          occasionally use aggregate billing information to guide our marketing
-          efforts.
+          If you sign up for a paid Sotuh Studio product, you will be asked to
+          provide your payment information and billing address. Credit card
+          information is submitted directly to our payment processor and
+          doesn&apos;t hit South Studio servers. We store a record of the
+          payment transaction, including the last 4 digits of the credit card
+          number, for purposes of account history, invoicing, and billing
+          support. We store your billing address so we can charge you for
+          service, calculate any sales tax due, send you invoices, and detect
+          fraudulent credit card transactions. We occasionally use aggregate
+          billing information to guide our marketing efforts.
         </Paragraph>
         <H2 space="marginTop">Product interactions</H2>
         <Paragraph type="policy">
           We store on our servers the content that you upload or receive or
-          maintain in your Prysm product accounts. This is so you can use our
-          products as intended, for example, to create projects in Basecamp or
-          to receive email in Prysm. We keep this content as long as your
-          account is active. If you delete your account, we’ll delete the
-          content within 60 days.
+          maintain in your South Studio product accounts. This is so you can use
+          our products as intended, for example, to create projects in Basecamp
+          or to receive email in South Studio. We keep this content as long as
+          your account is active. If you delete your account, we&apos;ll delete
+          the content within 60 days.
         </Paragraph>
         <H2 space="marginTop">Geolocation data</H2>
         <Paragraph type="policy">
@@ -114,25 +115,12 @@ function PrivatePolicy() {
           is no longer active. The web analytics we use are described further in
           the Advertising and Cookies section.
         </Paragraph>
-        <H2 space="marginTop">Anti-bot assessments</H2>
-        <Paragraph type="policy">
-          We use CAPTCHA across our applications to mitigate brute force logins
-          and as a means of spam protection. We have a legitimate interest in
-          protecting our apps and the broader Internet community from credential
-          stuffing attacks and spam. When you log into your Prysm accounts and
-          when you fill in certain forms in Prysm, the CAPTCHA service evaluates
-          various information (e.g., IP address, how long the visitor has been
-          on the app, mouse movements) to try to detect if the activity is from
-          an automated program instead of a human. The CAPTCHA service then
-          provides Prysm with the spam score results; we do not have access to
-          the evaluated information.
-        </Paragraph>
         <H2 space="marginTop">Voluntary correspondence</H2>
         <Paragraph type="policy">
-          When you email Prysm with a question or to ask for help, we keep that
-          correspondence, including your email address, so that we have a
-          history of past correspondence to reference if you reach out in the
-          future.
+          When you email South Studio with a question or to ask for help, we
+          keep that correspondence, including your email address, so that we
+          have a history of past correspondence to reference if you reach out in
+          the future.
         </Paragraph>
         <Paragraph type="policy">
           We also store information you may volunteer, for example, written
@@ -147,7 +135,7 @@ function PrivatePolicy() {
           Services to you. We also use third-party processors for other business
           functions such as managing newsletter subscriptions, sending customer
           surveys, and providing our company storefront. You can view the list
-          at
+          at{" "}
           <StyledA href="https://github.com/basecamp/policies/blob/master/privacy/company-processors/index.md">
             Company processors
           </StyledA>
@@ -156,21 +144,22 @@ function PrivatePolicy() {
         <Paragraph type="policy">
           We may share your information at your direction if you integrate a
           third-party service into your use of our products. For example, we may
-          allow you, at your option, to connect your Gmail account to your Prysm
-          account so that you can use Prysm to receive and respond to your Gmail
-          email. Email that you receive and respond to through Prysm from your
-          Gmail address will be stored by both Prysm and Google and will be
-          available to you from your Gmail account as well as your Prysm
-          account.
+          allow you, at your option, to connect your Gmail account to your South
+          Studio account so that you can use South Studio to receive and respond
+          to your Gmail email. Email that you receive and respond to through
+          South Studio from your Gmail address will be stored by both South
+          Studio and Google and will be available to you from your Gmail account
+          as well as your South Studio account.
         </Paragraph>
         <Paragraph type="policy">
-          No Prysm human looks at your content except for limited purposes with
-          your express permission, for example, if an error occurs that stops an
-          automated process from working and requires manual intervention to
-          fix. These are rare cases, and when they happen, we look for root
-          cause solutions as much as possible to avoid them recurring. We may
-          also access your data if required in order to respond to legal process
-          (see “When required under applicable law” below).
+          No South Studio human looks at your content except for limited
+          purposes with your express permission, for example, if an error occurs
+          that stops an automated process from working and requires manual
+          intervention to fix. These are rare cases, and when they happen, we
+          look for root cause solutions as much as possible to avoid them
+          recurring. We may also access your data if required in order to
+          respond to legal process (see “When required under applicable law”
+          below).
         </Paragraph>
         <Paragraph type="policy">
           To exclude you from seeing our ads. Where permissible by law and if
@@ -197,8 +186,8 @@ function PrivatePolicy() {
         </Paragraph>
         <Paragraph type="policy">When required under applicable law.</Paragraph>
         <Paragraph type="policy">
-          Prysm LLC is a U.S. company and all data infrastructure are located in
-          the U.S.
+          South Studio LLC is a U.S. company and all data infrastructure are
+          located in the U.S.
         </Paragraph>
         <Paragraph type="policy">
           <StyledUl>
@@ -216,10 +205,10 @@ function PrivatePolicy() {
               prohibited from doing so, and except in some emergency cases.
             </li>
             <li>
-              Preservation requests. Similarly, Prysm&apos; policy is to comply
-              with requests to preserve data only if compelled by the U.S.
-              Federal Stored Communications Act, 18 U.S.C. Section 2703(f), or
-              by a properly served U.S. subpoena for civil matters. We do not
+              Preservation requests. Similarly, South Studio&apos; policy is to
+              comply with requests to preserve data only if compelled by the
+              U.S. Federal Stored Communications Act, 18 U.S.C. Section 2703(f),
+              or by a properly served U.S. subpoena for civil matters. We do not
               share preserved data unless required by law or compelled by a
               court order that we choose not to appeal. Furthermore, unless we
               receive a proper warrant, court order, or subpoena before the
@@ -234,7 +223,7 @@ function PrivatePolicy() {
               information.
             </li>
             <li>
-              Finally, if Prysm LLC is acquired by or merges with another
+              Finally, if South Studio LLC is acquired by or merges with another
               company — we don&apos;t plan on that, but if it happens —
               we&apos;ll notify you well before any of your personal information
               is transferred or becomes subject to a different privacy policy.
@@ -243,8 +232,8 @@ function PrivatePolicy() {
         </Paragraph>
         <H2 space="marginTop">Your rights with respect to your information</H2>
         <Paragraph type="policy">
-          At Prysm, we strive to apply the same data rights to all customers,
-          regardless of their location. Some of these rights include:
+          At South Studio, we strive to apply the same data rights to all
+          customers, regardless of their location. Some of these rights include:
         </Paragraph>
         <Paragraph type="policy">
           <StyledUl>
@@ -267,9 +256,9 @@ function PrivatePolicy() {
               request, subject to certain limitations under applicable law, that
               your personal information be erased from our possession and, by
               extension, from all of our service providers. Fulfillment of some
-              data deletion requests may prevent you from using Prysm services
-              because our applications may then no longer work. In such cases, a
-              data deletion request may result in closing your account.
+              data deletion requests may prevent you from using South Studio
+              services because our applications may then no longer work. In such
+              cases, a data deletion request may result in closing your account.
             </li>
             <li>
               Right to Complain. You have the right to make a complaint
@@ -286,7 +275,6 @@ function PrivatePolicy() {
               Right to Object. You have the right, in certain situations, to
               object to how or why your personal information is processed.
             </li>
-
             <li>
               Right to not Be Subject to Automated Decision-Making. You have the
               right to object to and prevent any decision that could have a

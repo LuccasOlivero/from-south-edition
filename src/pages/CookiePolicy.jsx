@@ -9,6 +9,7 @@ import { Line } from "../ui/Line";
 import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { Strong } from "../ui/Strong";
 
 const Container = styled.div`
   display: flex;
@@ -74,7 +75,7 @@ function CookiePolicy() {
           Therefore it is recommended that you do not disable cookies. This
           Cookies Policy was created with the help of the{" "}
           <StyledA href="https://www.cookiepolicygenerator.com/cookie-policy-generator/">
-            Cookies Policy Generator.
+            <Strong>Cookies Policy Generator</Strong>.
           </StyledA>
         </Paragraph>
         <H2 space="marginTop">The Cookies We Set</H2>
@@ -122,7 +123,7 @@ function CookiePolicy() {
         <Paragraph type="policy">
           For more general information on cookies, please read{" "}
           <StyledA href="https://www.cookiepolicygenerator.com/sample-cookies-policy/">
-            the Cookies Policy article.
+            <Strong>the Cookies Policy article</Strong>.
           </StyledA>
         </Paragraph>
         <Paragraph type="policy2">

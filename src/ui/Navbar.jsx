@@ -10,8 +10,9 @@ const Nav = styled.nav`
   border-bottom: 0.5px solid #464646;
   position: fixed;
   width: 100%;
-  z-index: 100;
+  z-index: 200;
   padding: 0 13rem;
+
   @media (max-width: 768px) {
     padding: 0 5rem;
   }
@@ -20,6 +21,7 @@ const Nav = styled.nav`
 const NavList = styled.ul`
   display: flex;
   gap: 2.4rem;
+  list-style: none;
 `;
 
 const StyledNavLink = styled(NavLink)`
@@ -69,7 +71,7 @@ const Span = styled.span`
     content: "";
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -4px;
     width: 0;
     height: 2px;
     background-color: #0f5b5b;

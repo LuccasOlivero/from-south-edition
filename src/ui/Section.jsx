@@ -12,8 +12,8 @@ export const Section = styled.section`
     props.type === "text" &&
     css`
       display: flex;
-      justify-content: start;
       align-items: center;
+      justify-content: center;
       background: radial-gradient(at left top, #010101, #000000e2);
     `}
 

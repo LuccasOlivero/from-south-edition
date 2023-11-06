@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { NavLink, useLocation } from "react-router-dom";
+import Form from "../components.jsx/CompleteForm";
 
 import { H1 } from "../ui/H1";
 import { H2 } from "../ui/H2";
@@ -16,10 +18,9 @@ import SliderGif from "../ui/SliderGif";
 import SliderGif2 from "../ui/SliderGiff2";
 import { Footer } from "../ui/Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
-import Form from "../components.jsx/CompleteForm";
 import { Paragraph } from "../ui/Paragraph";
 import { Video } from "../ui/Video";
-import { NavLink, useLocation } from "react-router-dom";
+import { Strong } from "../ui/Strong";
 
 const Test = styled.div`
   width: 50%;
@@ -77,12 +78,14 @@ function About() {
             <H1 type="title">south studio</H1>
             <H2 uppercase="uppercase2">pushing the creative limitis</H2>
             <Paragraph>
-              At FromSouth, we know that no two projects are alike. We approach
-              each job with a fresh and expansive mindset to create a curated,
-              customized experience for every client. We love pushing the limits
-              of what is achievable to bring each design into a unique reality.
-              We specialize in short-form video editing, allowing us to provide
-              a creative and effective approach to visual communication.
+              As a video editor specializing in the art of short-form content,
+              my work is heavily influenced by the distinctive style of{" "}
+              <Strong>Alex Hormozi</Strong>. My primary focus is on creating
+              videos that not only captivate but also excel in drawing in users,
+              ultimately achieving hundreds of views. I bring a unique touch to
+              my video editing. I am dedicated to crafting visually stunning,
+              attention-grabbing short-form videos that are tailored to hook
+              viewers and drive impressive audience engagement.
             </Paragraph>
           </motion.div>
         </Main>
@@ -114,11 +117,11 @@ function About() {
                 other platform, I&apos;m here to transform your ideas into
                 unforgettable moments that resonate with your audience. As an
                 editor with over
-                <strong> 20 million</strong> views to my name, I specialize in
-                creating content<strong> Hormozi style </strong>that not only
-                captivates but generates significant engagement. Let&apos;s
-                collaborate and make your vision come to life through the art of
-                video editing. 🎥✨
+                <Strong> 20 million</Strong> views to my name, I specialize in
+                creating content style of<Strong> Alex Hormozi </Strong> that
+                not only captivates but generates significant engagement.
+                Let&apos;s collaborate and make your vision come to life through
+                the art of video editing. 🎥✨
               </Paragraph>
             </motion.span>
           </Test>

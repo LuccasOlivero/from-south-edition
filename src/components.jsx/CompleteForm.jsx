@@ -59,8 +59,8 @@ function CompleteForm() {
         });
       setIsLoading(false);
     } catch (err) {
-      console.log(err);
       toast.error("El mensaje no puedo enviarse, por favor, intente de nuevo");
+      setIsLoading(false);
     }
   }
 

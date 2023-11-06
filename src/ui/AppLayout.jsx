@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
+import { NavLink, useLocation } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
@@ -8,6 +9,7 @@ import Slider1 from "./SliderImg1";
 import Slider2 from "./SliderImg2";
 import SliderGif from "./SliderGif";
 import SliderGif2 from "./SliderGiff2";
+import CompleteForm from "../components.jsx/CompleteForm";
 
 import { Section } from "./Section";
 import { H1 } from "./H1";
@@ -20,8 +22,8 @@ import { Line } from "./Line";
 import { Noise } from "./Noise";
 import { Footer } from "./Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
-import CompleteForm from "../components.jsx/CompleteForm";
-import { NavLink, useLocation } from "react-router-dom";
+import { Strong } from "./Strong";
+import SliderGif3 from "./SliderGiff23";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -72,8 +74,8 @@ function AppLayout() {
     <StyledAppLayout ref={containerRef} onMouseMove={handleMouseMove}>
       <SliderContainer>
         <Slider1 scroll="scroll1" />
-        <Slider2 scroll="scroll2" />
-        <SliderGif scroll="scroll1" />
+        <SliderGif scroll="scroll2" />
+        <SliderGif3 scroll="scroll1" />
         <SliderGif2 scroll="scroll2" />
         <Slider1 scroll="scroll1" />
       </SliderContainer>
@@ -121,12 +123,14 @@ function AppLayout() {
             animate={mainControls}
             transition={{ duration: 0.5, delay: 1 }}
           >
-            At FromSouth, we know that no two projects are alike. We approach
-            each job with a fresh and expansive mindset to create a curated,
-            customized experience for every client. We love pushing the limits
-            of what is achievable to bring each design into a unique reality. We
-            specialize in short-form video editing, allowing us to provide a
-            creative and effective approach to visual communication.
+            As a video editor specializing in the art of short-form content, my
+            work is heavily influenced by the distinctive style of{" "}
+            <Strong>Alex Hormozi</Strong>. My primary focus is on creating
+            videos that not only captivate but also excel in drawing in users,
+            ultimately achieving hundreds of views. I bring a unique touch to my
+            video editing. I am dedicated to crafting visually stunning,
+            attention-grabbing short-form videos that are tailored to hook
+            viewers and drive impressive audience engagement.
           </motion.span>
         </H2>
         <Noise />
