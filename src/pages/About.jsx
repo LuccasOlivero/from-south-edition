@@ -21,6 +21,7 @@ import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { Paragraph } from "../ui/Paragraph";
 import { Video } from "../ui/Video";
 import { Strong } from "../ui/Strong";
+import SliderBackground from "../components.jsx/SliderBackground";
 
 const Test = styled.div`
   width: 50%;
@@ -53,16 +54,8 @@ function About() {
 
   return (
     <>
-      <SliderContainer>
-        <Slider1 scroll="scroll1" />
-        <Slider2 scroll="scroll2" />
-
-        <SliderGif scroll="scroll1" />
-        <SliderGif2 scroll="scroll2" />
-
-        <Slider1 scroll="scroll1" />
-      </SliderContainer>
-      <Navbar />
+      <SliderBackground />
+      {/* <Navbar /> */}
 
       <Section type="text">
         <Main>
@@ -146,7 +139,7 @@ function About() {
 
       <Form></Form>
 
-      <Footer>
+      {/* <Footer>
         <Noise />
         <Line />
 
@@ -161,7 +154,7 @@ function About() {
             <RigthsLink>Cookie Policy</RigthsLink>
           </NavLink>
         </ContainerRigths>
-      </Footer>
+      </Footer> */}
     </>
   );
 }

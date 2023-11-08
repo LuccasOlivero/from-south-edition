@@ -4,6 +4,7 @@ import { H2 } from "../ui/H2";
 import { Buttom } from "../ui/Buttom";
 import { Noise } from "../ui/Noise";
 import { H1 } from "../ui/H1";
+import { NavLink } from "react-router-dom";
 
 const Test = styled.div`
   height: 100vh;
@@ -31,7 +32,9 @@ function PageNotFound() {
         but you can click the button below to go back to the homepage.
       </H2>
 
-      <Buttom>Home</Buttom>
+      <NavLink to="/">
+        <Buttom>Home</Buttom>
+      </NavLink>
     </Test>
   );
 }

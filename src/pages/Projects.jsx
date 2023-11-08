@@ -1,18 +1,14 @@
 import styled from "styled-components";
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
-import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
-import { Footer } from "../ui/Footer";
-import { Line } from "../ui/Line";
 import { Main } from "../ui/Main";
-import Navbar from "../ui/Navbar";
-import { Noise } from "../ui/Noise";
 import { Section } from "../ui/Section";
 import { Row } from "../ui/Row";
 import { Column } from "../ui/Column";
 import { VideoContainer } from "../ui/VideoContainer";
-import { NavLink, useLocation } from "react-router-dom";
+import CompleteForm from "../components.jsx/CompleteForm";
 
 const Img = styled.img`
   width: 100%;
@@ -37,7 +33,6 @@ function Projects() {
 
   return (
     <>
-      <Navbar />
       <Section>
         <Main type="full">
           <Row>
@@ -167,22 +162,8 @@ function Projects() {
           </Row>
         </Main>
       </Section>
-      <Footer>
-        <Noise />
-        <Line />
 
-        <ContainerRigths>
-          <Rigths>
-            &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
-          </Rigths>
-          <NavLink to="/policy/privacy-policy">
-            <RigthsLink>Privacy Policy</RigthsLink>
-          </NavLink>
-          <NavLink to="/policy/cookie-policy">
-            <RigthsLink>Cookie Policy</RigthsLink>
-          </NavLink>
-        </ContainerRigths>
-      </Footer>
+      <CompleteForm />
     </>
   );
 }

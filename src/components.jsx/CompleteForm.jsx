@@ -17,6 +17,7 @@ import { Form } from "../ui/Form";
 import styled from "styled-components";
 import { useRef, useState } from "react";
 import toast from "react-hot-toast";
+import FooterComplete from "./FooterComplete";
 
 const TextArea = styled.textarea`
   backdrop-filter: blur(10px);
@@ -65,61 +66,64 @@ function CompleteForm() {
   }
 
   return (
-    <Contact>
-      <Line />
-      <Noise />
-      <Section type="flex">
-        <DivLinks>
-          <div>
-            <H1 type="form" as="h2">
-              Lets
-            </H1>
-            <H2 uppercase="uppercase2">connect!</H2>
-            <LineV2 />
-          </div>
+    <>
+      <Contact>
+        <Line />
+        <Noise />
+        <Section type="flex">
+          <DivLinks>
+            <div>
+              <H1 type="form" as="h2">
+                Lets
+              </H1>
+              <H2 uppercase="uppercase2">connect!</H2>
+              <LineV2 />
+            </div>
 
-          <NavLink to="https://www.linkedin.com/in/lucas-olivero-319090264/">
-            <Buttom type="circle">
-              <FontAwesomeIcon icon={faLink} size="2x" />
+            <NavLink to="https://www.linkedin.com/in/lucas-olivero-319090264/">
+              <Buttom type="circle">
+                <FontAwesomeIcon icon={faLink} size="2x" />
+              </Buttom>
+            </NavLink>
+          </DivLinks>
+
+          <Form onSubmit={handleSubmit(onSubmit)} ref={form}>
+            <Input
+              name="user_name"
+              id="user_name"
+              type="text"
+              placeholder="Name"
+              {...register("user_name")}
+              required
+              disabled={isLoading}
+            />
+            <Input
+              name="user_email"
+              id="user_email"
+              type="email"
+              placeholder="Email"
+              {...register("user_email")}
+              required
+              disabled={isLoading}
+            />
+            <TextArea
+              name="message"
+              id="message"
+              type="text-box"
+              placeholder="Type your message..."
+              {...register("message")}
+              required
+              disabled={isLoading}
+            />
+
+            <Buttom id="button" disabled={isLoading}>
+              {isLoading ? "Sending..." : "Submit"}
             </Buttom>
-          </NavLink>
-        </DivLinks>
-
-        <Form onSubmit={handleSubmit(onSubmit)} ref={form}>
-          <Input
-            name="user_name"
-            id="user_name"
-            type="text"
-            placeholder="Name"
-            {...register("user_name")}
-            required
-            disabled={isLoading}
-          />
-          <Input
-            name="user_email"
-            id="user_email"
-            type="email"
-            placeholder="Email"
-            {...register("user_email")}
-            required
-            disabled={isLoading}
-          />
-          <TextArea
-            name="message"
-            id="message"
-            type="text-box"
-            placeholder="Type your message..."
-            {...register("message")}
-            required
-            disabled={isLoading}
-          />
-
-          <Buttom id="button" disabled={isLoading}>
-            {isLoading ? "Sending..." : "Submit"}
-          </Buttom>
-        </Form>
-      </Section>
-    </Contact>
+          </Form>
+        </Section>
+      </Contact>
+      <FooterComplete />
+    </>
   );
 }
 

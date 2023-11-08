@@ -10,6 +10,7 @@ import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Strong } from "../ui/Strong";
+import FooterComplete from "../components.jsx/FooterComplete";
 
 const Container = styled.div`
   display: flex;
@@ -38,7 +39,6 @@ function CookiePolicy() {
   }, [location]);
   return (
     <>
-      <Navbar></Navbar>
       <Container>
         <H2 space="marginTop2">Cookie Policy</H2>
         <H2 space="marginTop">What Are Cookies</H2>
@@ -131,22 +131,7 @@ function CookiePolicy() {
           contact us through one of our preferred contact methods.
         </Paragraph>
       </Container>
-      <Footer>
-        <Noise />
-        <Line />
-
-        <ContainerRigths>
-          <Rigths>
-            &copy; {new Date().getFullYear()} South Studio. All rights reserved.
-          </Rigths>
-          <NavLink to="/policy/privacy-policy">
-            <RigthsLink>Privacy Policy</RigthsLink>
-          </NavLink>
-          <NavLink to="/policy/cookie-policy">
-            <RigthsLink>Cookie Policy</RigthsLink>
-          </NavLink>
-        </ContainerRigths>
-      </Footer>
+      <FooterComplete />
     </>
   );
 }

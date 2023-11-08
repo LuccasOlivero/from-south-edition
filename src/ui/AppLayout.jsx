@@ -24,6 +24,7 @@ import { Footer } from "./Footer";
 import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
 import { Strong } from "./Strong";
 import SliderGif3 from "./SliderGiff23";
+import SliderBackground from "../components.jsx/SliderBackground";
 
 const StyledAppLayout = styled.div`
   width: 100%;
@@ -72,16 +73,7 @@ function AppLayout() {
 
   return (
     <StyledAppLayout ref={containerRef} onMouseMove={handleMouseMove}>
-      <SliderContainer>
-        <Slider1 scroll="scroll1" />
-        <SliderGif scroll="scroll2" />
-        <SliderGif3 scroll="scroll1" />
-        <SliderGif2 scroll="scroll2" />
-        <Slider1 scroll="scroll1" />
-      </SliderContainer>
-
-      <Navbar />
-
+      <SliderBackground />
       <Section type="margin">
         <Main>
           <motion.div
@@ -135,25 +127,7 @@ function AppLayout() {
         </H2>
         <Noise />
       </Section>
-
       <CompleteForm></CompleteForm>
-
-      <Footer>
-        <Noise />
-        <Line />
-
-        <ContainerRigths>
-          <Rigths>
-            &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
-          </Rigths>
-          <NavLink to="/policy/privacy-policy">
-            <RigthsLink>Privacy Policy</RigthsLink>
-          </NavLink>
-          <NavLink to="/policy/cookie-policy">
-            <RigthsLink>Cookie Policy</RigthsLink>
-          </NavLink>
-        </ContainerRigths>
-      </Footer>
     </StyledAppLayout>
   );
 }

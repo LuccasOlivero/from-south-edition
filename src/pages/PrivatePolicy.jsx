@@ -10,6 +10,7 @@ import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { NavLink, useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import { Strong } from "../ui/Strong";
+import FooterComplete from "../components.jsx/FooterComplete";
 
 const Container = styled.div`
   display: flex;
@@ -39,7 +40,6 @@ function PrivatePolicy() {
 
   return (
     <>
-      <Navbar></Navbar>
       <Container>
         <H2 space="marginTop2">Privacy Policy</H2>
         <Paragraph type="policy">
@@ -314,23 +314,7 @@ function PrivatePolicy() {
         </Paragraph>
         <Paragraph type="policy2">Last updated: Novenber 5, 2023</Paragraph>
       </Container>
-      <Footer>
-        <Noise />
-        <Line />
-
-        <ContainerRigths>
-          <Rigths>
-            &copy; {new Date().getFullYear()} South Studio. All rights reserved.
-          </Rigths>
-
-          <NavLink to="/policy/privacy-policy">
-            <RigthsLink>Privacy Policy</RigthsLink>
-          </NavLink>
-          <NavLink to="/policy/cookie-policy">
-            <RigthsLink>Cookie Policy</RigthsLink>
-          </NavLink>
-        </ContainerRigths>
-      </Footer>
+      <FooterComplete />
     </>
   );
 }

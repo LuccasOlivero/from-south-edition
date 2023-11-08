@@ -1,4 +1,5 @@
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import { Toaster } from "react-hot-toast";
 
 import GlobalStyles from "./styles/GlobalStyles";
 import AppLayout from "./ui/AppLayout";
@@ -7,16 +8,21 @@ import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
 import PrivatePolicy from "./pages/PrivatePolicy";
 import CookiePolicy from "./pages/CookiePolicy";
-import { Toaster } from "react-hot-toast";
+import Navbar from "./ui/Navbar";
+import FooterComplete from "./components.jsx/FooterComplete";
+
+// Featrues: upload images to Supabase and fech them, sliders, fix text into applayout (problem centering),
 
 function App() {
   return (
     <>
       <GlobalStyles />
       <BrowserRouter>
+        <Navbar />
+
         <Routes>
-          <Route element={<AppLayout />}>
-            <Route index element={<Navigate replace to="/" />} />
+          <Route path="/" element={<AppLayout />}>
+            <Route index element={<Navigate replace to="/" />}></Route>
           </Route>
 
           <Route path="/about" element={<About />} />
