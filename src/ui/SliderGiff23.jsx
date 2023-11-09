@@ -1,31 +1,9 @@
 import styled from "styled-components";
-import { scroll1, scroll2 } from "../styles/Keyframes";
-
-const DivSlider = styled.div`
-  width: 33rem;
-  left: -29rem;
-  height: auto;
-  margin: auto;
-  position: relative;
-`;
-
-const DivSlideTrack = styled.div`
-  display: flex;
-  flex-direction: column;
-  rotate: 20deg;
-  width: calc(200px * 14);
-  gap: 2rem 0;
-  position: relative;
-
-  animation: ${(props) => (props.scroll === "scroll1" ? scroll1 : scroll2)} 370s
-    linear infinite;
-  -webkit-animation: ${(props) =>
-      props.scroll === "scroll1" ? scroll1 : scroll2}
-    370s linear infinite;
-`;
+import { DivSlider } from "./DivSlider";
+import { DivSlideTrack } from "./DivSliderTrack";
 
 const DivSlide = styled.div`
-  width: 30rem;
+  width: 31rem;
   position: relative;
 `;
 

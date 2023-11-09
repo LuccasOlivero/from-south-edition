@@ -66,7 +66,7 @@ function AppLayout() {
   return (
     <StyledAppLayout ref={containerRef} onMouseMove={handleMouseMove}>
       <SliderBackground />
-      <Section type="margin">
+      {/* <Section type="margin">
         <Main>
           <motion.div
             variants={{
@@ -119,7 +119,7 @@ function AppLayout() {
         </H2>
         <Noise />
       </Section>
-      <CompleteForm></CompleteForm>
+      <CompleteForm></CompleteForm> */}
     </StyledAppLayout>
   );
 }

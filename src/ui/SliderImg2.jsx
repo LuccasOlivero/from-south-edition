@@ -1,32 +1,11 @@
 import styled from "styled-components";
-import { scroll1, scroll2 } from "../styles/Keyframes";
+import { DivSlider } from "./DivSlider";
+import { DivSlideTrack } from "./DivSliderTrack";
 
-const DivSlider = styled.div`
-  width: 33rem;
-  left: -29rem;
-  height: auto;
-  margin: auto;
-  position: relative;
-  /* overflow: hidden; */
-`;
-
-const DivSlideTrack = styled.div`
-  display: flex;
-  flex-direction: column;
-  rotate: 20deg;
-  width: calc(200px * 14);
-  gap: 2rem 0;
-  position: relative;
-
-  animation: ${(props) => (props.scroll === "scroll1" ? scroll1 : scroll2)} 370s
-    linear infinite;
-  -webkit-animation: ${(props) =>
-      props.scroll === "scroll1" ? scroll1 : scroll2}
-    370s linear infinite;
-`;
-
+//testear aca <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 const DivSlide = styled.div`
-  width: 30rem;
+  width: 70%;
+  margin: 0 auto;
   position: relative;
   /* overflow: hidden; */
 `;
@@ -46,13 +25,13 @@ export default function Slider2({ scroll }) {
           <Img src="/img7.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/img6.png" alt="test" />
+          <Img src="/img6.jpg" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/img5.png" alt="test" />
+          <Img src="/img5.jpg" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/img4.png" alt="test" />
+          <Img src="/img4.jpg" alt="test" />
         </DivSlide>
         <DivSlide>
           <Img src="/img3.png" alt="test" />
