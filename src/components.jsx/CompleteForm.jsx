@@ -79,8 +79,8 @@ function CompleteForm() {
               <H2 uppercase="uppercase2">connect!</H2>
               <LineV2 />
             </div>
-
-            <NavLink to="https://www.linkedin.com/in/lucas-olivero-319090264/">
+            {/* https://www.linkedin.com/in/lucas-olivero-319090264/ */}
+            <NavLink to="">
               <Buttom type="circle">
                 <FontAwesomeIcon icon={faLink} size="2x" />
               </Buttom>
