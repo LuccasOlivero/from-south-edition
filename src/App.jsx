@@ -1,19 +1,20 @@
 import { Route, Routes, BrowserRouter, Navigate } from "react-router-dom";
+import { lazy, Suspense } from "react";
 import { Toaster } from "react-hot-toast";
 
 import GlobalStyles from "./styles/GlobalStyles";
 import AppLayout from "./ui/AppLayout";
-import Projects from "./pages/Projects";
 import About from "./pages/About";
 import PageNotFound from "./pages/PageNotFound";
 import PrivatePolicy from "./pages/PrivatePolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import Navbar from "./ui/Navbar";
-import FooterComplete from "./components.jsx/FooterComplete";
-
+import { Noise } from "./ui/Noise";
+import { Section } from "./ui/Section";
 // Featrues: upload images to Supabase and fech them, sliders, fix text into applayout (problem centering),
 
 function App() {
+  const Projects = lazy(() => import("./pages/Projects"));
   return (
     <>
       <GlobalStyles />
@@ -26,7 +27,20 @@ function App() {
           </Route>
 
           <Route path="/about" element={<About />} />
-          <Route path="/projects" element={<Projects />} />
+          <Route
+            path="/projects"
+            element={
+              <Suspense
+                fallback={
+                  <Section>
+                    <Noise />
+                  </Section>
+                }
+              >
+                <Projects />
+              </Suspense>
+            }
+          />
           <Route path="/policy/privacy-policy" element={<PrivatePolicy />} />
           <Route path="/policy/cookie-policy" element={<CookiePolicy />} />
           <Route path="*" element={<PageNotFound />} />

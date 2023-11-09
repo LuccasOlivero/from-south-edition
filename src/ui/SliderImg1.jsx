@@ -4,8 +4,6 @@ import { scroll1, scroll2 } from "../styles/Keyframes";
 const DivSlider = styled.div`
   width: 33rem;
   left: -29rem;
-  height: auto;
-  margin: auto;
   position: relative;
 `;
 

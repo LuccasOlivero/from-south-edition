@@ -1,15 +1,9 @@
 import styled from "styled-components";
 
 import { H2 } from "../ui/H2";
-import { Noise } from "../ui/Noise";
 import { Paragraph } from "../ui/Paragraph";
-import Navbar from "../ui/Navbar";
-import { Footer } from "../ui/Footer";
-import { Line } from "../ui/Line";
-import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
-import { Strong } from "../ui/Strong";
 import FooterComplete from "../components.jsx/FooterComplete";
 
 const Container = styled.div`
