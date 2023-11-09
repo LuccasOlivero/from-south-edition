@@ -41,25 +41,25 @@ export default function SliderGif3({ scroll }) {
     <DivSlider>
       <DivSlideTrack scroll={scroll}>
         <DivSlide>
-          <Img src="/gif10.gif" alt="test" />
-        </DivSlide>
-        <DivSlide>
-          <Img src="/gif11.gif" alt="test" />
-        </DivSlide>
-        <DivSlide>
-          <Img src="/gif12.gif" alt="test" />
-        </DivSlide>
-        <DivSlide>
-          <Img src="/gif13.gif" alt="test" />
-        </DivSlide>
-        <DivSlide>
-          <Img src="/gif14.gif" alt="test" />
+          <Img src="/gif16.gif" alt="test" />
         </DivSlide>
         <DivSlide>
           <Img src="/gif15.gif" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/gif16.gif" alt="test" />
+          <Img src="/gif14.gif" alt="test" />
+        </DivSlide>
+        <DivSlide>
+          <Img src="/gif13.gif" alt="test" />
+        </DivSlide>
+        <DivSlide>
+          <Img src="/gif12.gif" alt="test" />
+        </DivSlide>
+        <DivSlide>
+          <Img src="/gif11.gif" alt="test" />
+        </DivSlide>
+        <DivSlide>
+          <Img src="/gif6.gif" alt="test" />
         </DivSlide>
       </DivSlideTrack>
     </DivSlider>

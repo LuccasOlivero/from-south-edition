@@ -1,23 +1,15 @@
 import styled from "styled-components";
 import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
-import { NavLink, useLocation } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Form from "../components.jsx/CompleteForm";
 
 import { H1 } from "../ui/H1";
 import { H2 } from "../ui/H2";
 import { Main } from "../ui/Main";
-import Navbar from "../ui/Navbar";
 import { Noise } from "../ui/Noise";
 import { Section } from "../ui/Section";
 import { Line } from "../ui/Line";
-import { SliderContainer } from "../ui/SliderContainer";
-import Slider1 from "../ui/SliderImg1";
-import Slider2 from "../ui/SliderImg2";
-import SliderGif from "../ui/SliderGif";
-import SliderGif2 from "../ui/SliderGiff2";
-import { Footer } from "../ui/Footer";
-import { ContainerRigths, Rigths, RigthsLink } from "../ui/ContainerRigths";
 import { Paragraph } from "../ui/Paragraph";
 import { Video } from "../ui/Video";
 import { Strong } from "../ui/Strong";

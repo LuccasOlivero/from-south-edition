@@ -50,13 +50,13 @@ export default function Slider1({ scroll }) {
           <Img src="/img3.png" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/img4.png" alt="test" />
+          <Img src="/img4.jpg" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/img5.png" alt="test" />
+          <Img src="/img5.jpg" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/img6.png" alt="test" />
+          <Img src="/img6.jpg" alt="test" />
         </DivSlide>
         <DivSlide>
           <Img src="/img7.png" alt="test" />

@@ -5,10 +5,6 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
-import Slider1 from "./SliderImg1";
-import Slider2 from "./SliderImg2";
-import SliderGif from "./SliderGif";
-import SliderGif2 from "./SliderGiff2";
 import CompleteForm from "../components.jsx/CompleteForm";
 
 import { Section } from "./Section";
@@ -17,13 +13,9 @@ import { H2 } from "./H2";
 import { Buttom } from "./Buttom";
 import { Picture } from "./Picture";
 import { Main } from "./Main";
-import { SliderContainer } from "./SliderContainer";
 import { Line } from "./Line";
 import { Noise } from "./Noise";
-import { Footer } from "./Footer";
-import { ContainerRigths, Rigths, RigthsLink } from "./ContainerRigths";
 import { Strong } from "./Strong";
-import SliderGif3 from "./SliderGiff23";
 import SliderBackground from "../components.jsx/SliderBackground";
 
 const StyledAppLayout = styled.div`
