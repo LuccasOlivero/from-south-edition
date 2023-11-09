@@ -121,8 +121,8 @@ function About() {
               animate={mainControls}
               transition={{ duration: 0.5, delay: 2 }}
             >
-              <video width="100%" height="100%" controls>
-                <source src="/video.mp4" type="video/mp4" />
+              <video width="100%" height="100%" controls autoPlay loop>
+                <source src="../../public/video4.mp4" type="video/mp4" />
               </video>
             </motion.span>
           </Video>
@@ -130,23 +130,6 @@ function About() {
       </Section>
 
       <Form></Form>
-
-      {/* <Footer>
-        <Noise />
-        <Line />
-
-        <ContainerRigths>
-          <Rigths>
-            &copy; {new Date().getFullYear()} South Studio. All rights reserved.{" "}
-          </Rigths>
-          <NavLink to="/policy/privacy-policy">
-            <RigthsLink>Privacy Policy</RigthsLink>
-          </NavLink>
-          <NavLink to="/policy/cookie-policy">
-            <RigthsLink>Cookie Policy</RigthsLink>
-          </NavLink>
-        </ContainerRigths>
-      </Footer> */}
     </>
   );
 }

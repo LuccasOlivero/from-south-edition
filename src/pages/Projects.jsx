@@ -51,13 +51,13 @@ function Projects() {
                     <source src="/video.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img8.jpeg" alt="" />
+                <Img src="/img8.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video2.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img4.jpeg" alt="" />
+                <Img src="/img4.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video3.mp4" type="video/mp4" />
@@ -83,13 +83,13 @@ function Projects() {
                     <source src="/video6.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img9.jpeg" alt="" />
+                <Img src="/img9.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video5.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img10.jpeg" alt="" />
+                <Img src="/img10.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video4.mp4" type="video/mp4" />
@@ -113,19 +113,19 @@ function Projects() {
                     <source src="/video7.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img11.jpeg" alt="" />
+                <Img src="/img11.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video8.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img12.jpeg" alt="" />
+                <Img src="/img12.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video9.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img13.jpeg" alt="" />
+                <Img src="/img13.jpg" alt="" />
               </motion.span>
             </Column>
 
@@ -139,14 +139,14 @@ function Projects() {
                 animate="visible"
                 transition={{ duration: 0.6, delay: 1 }}
               >
-                <Img src="/img16.jpeg" alt="" />
+                <Img src="/img16.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video10.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
-                <Img src="/img18.jpeg" alt="" />
-                <Img src="/img17.jpeg" alt="" />
+                <Img src="/img18.jpg" alt="" />
+                <Img src="/img17.jpg" alt="" />
                 <VideoContainer>
                   <Video controls>
                     <source src="/video11.mp4" type="video/mp4" />
