@@ -12,15 +12,27 @@ import CompleteForm from "../components.jsx/CompleteForm";
 
 const Img = styled.img`
   width: 100%;
-  height: 15rem;
-  margin-top: -1.1rem;
-  padding: 14px;
+  margin-bottom: 1rem;
+  position: relative;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Video = styled.video`
+  position: relative;
   width: 100%;
-  height: 100%;
+  margin-bottom: 1rem;
   cursor: pointer;
+
+  @media (max-width: 1024px) {
+    margin-bottom: 0.5rem;
+  }
 `;
 
 function Projects() {
@@ -30,6 +42,15 @@ function Projects() {
     // Scrolls to the top when the location changes
     window.scrollTo(0, 0);
   }, [location]);
+
+  function handlePlay(event) {
+    const allVideos = document.querySelectorAll("video");
+    allVideos.forEach((video) => {
+      if (video !== event.currentTarget) {
+        video.pause();
+      }
+    });
+  }
 
   return (
     <>
@@ -47,19 +68,19 @@ function Projects() {
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
                 <VideoContainer>
-                  <Video controls>
+                  <Video onClick={handlePlay} controls>
                     <source src="/video.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img8.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video2.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img4.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video3.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
@@ -79,19 +100,19 @@ function Projects() {
               >
                 <Img src="/img1.png" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video6.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img9.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video5.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img10.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video4.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
@@ -109,19 +130,19 @@ function Projects() {
                 transition={{ duration: 0.6, delay: 0.8 }}
               >
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video7.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img11.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video8.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img12.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video9.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
@@ -141,19 +162,19 @@ function Projects() {
               >
                 <Img src="/img16.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video10.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <Img src="/img18.jpg" alt="" />
                 <Img src="/img17.jpg" alt="" />
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video11.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>
                 <VideoContainer>
-                  <Video controls>
+                  <Video controls onClick={handlePlay}>
                     <source src="/video12.mp4" type="video/mp4" />
                   </Video>
                 </VideoContainer>

@@ -5,6 +5,7 @@ import { NavLink, useLocation } from "react-router-dom";
 
 import SpinningText from "./SpinningText";
 import CompleteForm from "../components.jsx/CompleteForm";
+import SliderBackground from "../components.jsx/SliderBackground";
 
 import { Section } from "./Section";
 import { H1 } from "./H1";
@@ -15,7 +16,6 @@ import { Main } from "./Main";
 import { Line } from "./Line";
 import { Noise } from "./Noise";
 import { Strong } from "./Strong";
-import SliderBackground from "../components.jsx/SliderBackground";
 
 const StyledAppLayout = styled.div`
   width: 100%;
