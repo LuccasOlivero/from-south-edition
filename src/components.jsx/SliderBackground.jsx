@@ -8,11 +8,11 @@ function SliderBackground() {
   return (
     <>
       <SliderContainer>
-        <Slider1 scroll="scroll2" />
-        <Slider2 scroll="scroll1" />
-        <SliderGif3 scroll="scroll2" />
-        <SliderGif2 scroll="scroll1" />
-        <Slider1 scroll="scroll2" />
+        <Slider1 scroll="scroll1" />
+        <Slider2 />
+        <SliderGif3 scroll="scroll1" />
+        <SliderGif2 />
+        <Slider1 scroll="scroll1" />
       </SliderContainer>
     </>
   );

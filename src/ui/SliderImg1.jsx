@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import { DivSlider } from "./DivSlider";
 import { DivSlideTrack } from "./DivSliderTrack";
-
-const DivSlide = styled.div`
-  width: 31rem;
-  position: relative;
-`;
+import { DivSlide } from "./DivSlide";
 
 const Img = styled.img`
   position: relative;

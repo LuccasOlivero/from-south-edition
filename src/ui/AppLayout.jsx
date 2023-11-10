@@ -3,7 +3,6 @@ import { useRef, useEffect } from "react";
 import { motion, useAnimation, useInView } from "framer-motion";
 import { NavLink, useLocation } from "react-router-dom";
 
-import Navbar from "./Navbar";
 import SpinningText from "./SpinningText";
 import CompleteForm from "../components.jsx/CompleteForm";
 
@@ -66,7 +65,7 @@ function AppLayout() {
   return (
     <StyledAppLayout ref={containerRef} onMouseMove={handleMouseMove}>
       <SliderBackground />
-      {/* <Section type="margin">
+      <Section type="margin">
         <Main>
           <motion.div
             variants={{
@@ -119,7 +118,7 @@ function AppLayout() {
         </H2>
         <Noise />
       </Section>
-      <CompleteForm></CompleteForm> */}
+      <CompleteForm></CompleteForm>
     </StyledAppLayout>
   );
 }

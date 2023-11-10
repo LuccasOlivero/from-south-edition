@@ -1,11 +1,7 @@
 import styled from "styled-components";
 import { DivSlider } from "./DivSlider";
 import { DivSlideTrack } from "./DivSliderTrack";
-
-const DivSlide = styled.div`
-  width: 31rem;
-  position: relative;
-`;
+import { DivSlide } from "./DivSlide";
 
 const Img = styled.img`
   position: relative;
@@ -19,7 +15,7 @@ export default function SliderGif3({ scroll }) {
     <DivSlider>
       <DivSlideTrack scroll={scroll}>
         <DivSlide>
-          <Img src="/gif16.gif" alt="test" />
+          <Img src="/gif6.gif" alt="test" />
         </DivSlide>
         <DivSlide>
           <Img src="/gif15.gif" alt="test" />
@@ -37,7 +33,7 @@ export default function SliderGif3({ scroll }) {
           <Img src="/gif11.gif" alt="test" />
         </DivSlide>
         <DivSlide>
-          <Img src="/gif6.gif" alt="test" />
+          <Img src="/gif16.gif" alt="test" />
         </DivSlide>
       </DivSlideTrack>
     </DivSlider>

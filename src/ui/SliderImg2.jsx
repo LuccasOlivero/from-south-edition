@@ -1,14 +1,7 @@
 import styled from "styled-components";
 import { DivSlider } from "./DivSlider";
 import { DivSlideTrack } from "./DivSliderTrack";
-
-//testear aca <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
-const DivSlide = styled.div`
-  width: 70%;
-  margin: 0 auto;
-  position: relative;
-  /* overflow: hidden; */
-`;
+import { DivSlide } from "./DivSlide";
 
 const Img = styled.img`
   position: relative;
