@@ -5,7 +5,7 @@ export const Section = styled.section`
     props.type === "margin" &&
     css`
       margin: 0 auto;
-      background: radial-gradient(at left top, #010101, #000000e2);
+      background: radial-gradient(at left top, #010101, #000000ce);
     `}
 
   ${(props) =>
@@ -14,7 +14,7 @@ export const Section = styled.section`
       display: flex;
       align-items: center;
       justify-content: center;
-      background: radial-gradient(at left top, #010101, #000000e2);
+      background: radial-gradient(at left top, #010101, #000000ce);
     `}
 
   ${(props) =>
@@ -22,7 +22,7 @@ export const Section = styled.section`
     css`
       display: flex;
       justify-content: space-between;
-      background: radial-gradient(at left top, #010101, #000000e2);
+      background: radial-gradient(at left top, #010101, #000000ce);
     `}
 
     ${(props) =>
@@ -35,6 +35,7 @@ export const Section = styled.section`
 
   @media (max-width: 768px) {
     padding: 0 6rem;
+    background: radial-gradient(at left top, #010101ea, #000000ce);
   }
 
   padding: 0 13rem;

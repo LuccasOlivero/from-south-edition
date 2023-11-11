@@ -6,7 +6,6 @@ import { DivSlide } from "./DivSlide";
 const Img = styled.img`
   position: relative;
   width: 100%;
-  border: 2px solid red;
   height: 35rem;
   border-radius: 9%;
 `;
