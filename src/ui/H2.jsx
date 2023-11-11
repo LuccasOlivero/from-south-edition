@@ -24,13 +24,16 @@ export const H2 = styled.h2`
       font-size: 3.5rem;
       line-height: 5rem;
       padding: 2rem 0;
+
+      @media (max-width: 500px) {
+        font-weight: 600;
+      }
     `}
 
     ${(props) =>
     props.space === "marginTop2" &&
     css`
       font-size: 7rem;
-      /* line-height: 5rem; */
       padding-top: 9rem;
     `}
 
@@ -44,8 +47,14 @@ export const H2 = styled.h2`
     line-height: 3rem;
   }
 
-  @media (max-width: 425px) {
+  @media (max-width: 500px) {
     font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  @media (max-width: 400px) {
+    font-size: 1.8rem;
+    line-height: 2rem;
   }
 
   text-wrap: balance;

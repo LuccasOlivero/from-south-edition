@@ -34,7 +34,6 @@ function About() {
 
   useEffect(() => {
     if (isInView) {
-      console.log("ey");
       mainControls.start("visible");
     }
   }, [isInView, mainControls]);

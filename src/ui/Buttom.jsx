@@ -14,6 +14,10 @@ export const Buttom = styled.button`
     css`
       width: auto;
       padding: 0.6rem;
+
+      @media (max-width: 425px) {
+        display: none;
+      }
     `} 
 
   backdrop-filter: blur(10px);

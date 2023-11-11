@@ -6,6 +6,10 @@ export const Section = styled.section`
     css`
       margin: 0 auto;
       background: radial-gradient(at left top, #010101, #000000ce);
+
+      @media (max-width: 768px) {
+        background: radial-gradient(at left top, #010101ea, #000000ce);
+      }
     `}
 
   ${(props) =>
@@ -23,6 +27,12 @@ export const Section = styled.section`
       display: flex;
       justify-content: space-between;
       background: radial-gradient(at left top, #010101, #000000ce);
+
+      @media (max-width: 425px) {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
     `}
 
     ${(props) =>
@@ -32,10 +42,9 @@ export const Section = styled.section`
       justify-content: center;
       background-color: black;
     `}
-
+    
   @media (max-width: 768px) {
     padding: 0 6rem;
-    background: radial-gradient(at left top, #010101ea, #000000ce);
   }
 
   padding: 0 13rem;

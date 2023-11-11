@@ -9,4 +9,12 @@ export const SliderContainer = styled.div`
   z-index: -1;
   background-color: black;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  @media (max-width: 415px) {
+    height: 220%;
+  }
 `;

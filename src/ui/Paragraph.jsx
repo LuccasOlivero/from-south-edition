@@ -35,7 +35,7 @@ export const Paragraph = styled.p`
 
   @media (max-width: 768px) {
     flex-direction: column;
-    line-height: 2.5rem;
+    line-height: 2rem;
   }
 `;
 
