@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const Contact = styled.div`
-  /* max-width: 2500px; */
   height: 100vh;
   width: 100%;
   background-color: black;

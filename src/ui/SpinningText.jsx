@@ -15,7 +15,7 @@ const Container = styled.div`
   bottom: 0;
   margin-bottom: 4rem;
 
-  @media (max-width: 768px) {
+  @media (max-width: 400px) {
     display: none;
   }
 `;

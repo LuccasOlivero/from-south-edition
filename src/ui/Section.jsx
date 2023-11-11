@@ -8,7 +8,7 @@ export const Section = styled.section`
       background: radial-gradient(at left top, #010101, #000000ce);
 
       @media (max-width: 768px) {
-        background: radial-gradient(at left top, #010101ea, #000000ce);
+        background: radial-gradient(at left top, #010101, #000000a8);
       }
     `}
 
