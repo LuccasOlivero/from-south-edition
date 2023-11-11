@@ -3,6 +3,7 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;

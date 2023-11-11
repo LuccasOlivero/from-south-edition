@@ -9,4 +9,8 @@ export const Form = styled.form`
   max-width: 50rem;
   position: relative;
   z-index: 10;
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;

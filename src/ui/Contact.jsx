@@ -16,4 +16,8 @@ export const DivLinks = styled.div`
   color: white;
   gap: 10rem;
   width: 60%;
+
+  @media (max-width: 425px) {
+    width: 100%;
+  }
 `;
