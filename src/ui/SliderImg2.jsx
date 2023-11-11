@@ -12,7 +12,7 @@ const Img = styled.img`
 
 export default function Slider2({ scroll }) {
   return (
-    <DivSlider>
+    <DivSlider type="hidden">
       <DivSlideTrack scroll={scroll}>
         <DivSlide>
           <Img src="/img7.png" alt="test" />

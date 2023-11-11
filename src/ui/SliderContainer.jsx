@@ -10,8 +10,8 @@ export const SliderContainer = styled.div`
   background-color: black;
   overflow: hidden;
 
-  @media (max-width: 768px) {
-    grid-template-columns: repeat(2, 350px);
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(3, 430px);
   }
 
   @media (max-width: 415px) {
