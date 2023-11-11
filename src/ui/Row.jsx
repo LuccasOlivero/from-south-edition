@@ -11,5 +11,6 @@ export const Row = styled.div`
 
   @media (max-width: 1024px) {
     gap: 1rem;
+    display: block;
   }
 `;

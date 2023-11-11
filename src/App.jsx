@@ -10,7 +10,6 @@ import PrivatePolicy from "./pages/PrivatePolicy";
 import CookiePolicy from "./pages/CookiePolicy";
 import Navbar from "./ui/Navbar";
 import { Noise } from "./ui/Noise";
-import { Section } from "./ui/Section";
 import CompleteForm from "./components.jsx/CompleteForm";
 // Featrues: upload images to Supabase and fech them, sliders, fix text into applayout (problem centering),
 
