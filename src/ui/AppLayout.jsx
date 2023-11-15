@@ -78,7 +78,7 @@ function AppLayout() {
           >
             <H1 type="title">South Studio</H1>
             <H2 uppercase="uppercase">
-              he full spectrun of
+              the full spectrun of
               <br /> content creation
             </H2>
 
